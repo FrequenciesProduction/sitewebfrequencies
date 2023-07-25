@@ -1,5 +1,6 @@
 <template>
     <main class="main_box" role="main">
+        <img class="onde" src="/onde_deco.png" alt="">
         <div class="description">
             <img src="/qui_sommes_nous_2.png" alt="">
 
@@ -34,12 +35,16 @@
                     C’est l’origine du projet !
                 </p>
         </div>
-        
+        <img class="onde" src="/onde_deco.png" alt="">
     </main>
 </template>
 
 <style scoped>
-
+.onde {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 2vw;
+}
 .description {
     margin-left: 4vw;
     margin-right: 4vw;

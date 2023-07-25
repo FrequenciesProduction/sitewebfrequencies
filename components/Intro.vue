@@ -1,10 +1,10 @@
 <template>
     <div class="intro">
         <h1>Frequencies Production</h1>
-        <p>Creation de fictions sonores inspirées pour des personnes malvoyantes à destination de tous</p>
+        <p>Création de fictions sonores inspirées pour des personnes malvoyantes à destination de tous</p>
         <ul>
             <li>
-                <a class="button--white" href="https://docs.google.com/forms/d/1m4vqLZfd-fCmJKWsJ4Bksc-brHoULsLabrPuIlywbBc/prefill" target="blank">Devenir bénévole</a>
+                <a class="button--white" href="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" target="blank">Devenir bénévole<span aria-label="ouvre un nouvel onglet"></span></a>
             </li>
             <li>
                 <a class="button--white">Devenir sponsor</a>
@@ -24,6 +24,6 @@
     background-repeat: no-repeat;
     padding-top: 32%;
     padding-bottom: 5%;
-    margin-bottom: 10vw;
+    margin-bottom: 4vw;
 }
 </style>

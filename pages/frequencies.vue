@@ -1,7 +1,9 @@
 <template>
     <main class="main_box" role="main">
         <h1>Frequencies - Vidéos Youtube</h1>
+        <img src="/onde_deco.png" alt="">
         <iframe title="Lecteur intégré youtube pour regarder la vidéo 'Les Chèques et Matt'" width="560" height="315" src="https://www.youtube.com/embed/-yg-KmSC8YM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img src="/onde_deco.png" alt="">
     </main>
 </template>
 
@@ -19,3 +21,15 @@ export default defineComponent({
     }
 })
 </script>
+
+<style scoped>
+img {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 2vw;
+}
+
+iframe {
+    margin-bottom: 2vw;
+}
+</style>

@@ -8,9 +8,35 @@
 
         <h2>Le dernier épisode</h2>
         <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
+        <div class="box--resume">
+        <button @click="toggleText(0)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description du dernier épisode publié"></span></button>
+        <p v-show="last" class="text--resume">
+            L'archiviste et Lance enquêtent sur un cas d'âme blanche. Oserez-vous lancer l'enregistrement ?
+            <br><br>
+            ----------------------------------------------------------------------
+            <br><br>
+            Acteur : David Borens / Fred Mafra<br>
+            Sound désigner : José Toutain<br>
+            Composition : Sophian Alkurdi<br>
+            Mixage / Mastering : Adrien Halfon<br>
+        </p>
+        </div>
+
         <h2>Tous les épisodes</h2>
         <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="box--resume">
+        <button @click="toggleText(1)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
+        <p v-show="one" class="text--resume">
+            L'archiviste et Lance enquêtent sur un cas d'âme blanche. Oserez-vous lancer l'enregistrement ?
+            <br><br>
+            ----------------------------------------------------------------------
+            <br><br>
+            Acteur : David Borens / Fred Mafra<br>
+            Sound désigner : José Toutain<br>
+            Composition : Sophian Alkurdi<br>
+            Mixage / Mastering : Adrien Halfon<br>
+        </p>
+        </div>
     
     </main>
 </template>
@@ -19,6 +45,18 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+    data: () => ({
+                    last: true,
+                    one: false,
+                }),
+    methods: {
+    toggleText(wich) {
+        if (wich == 0)
+            this.last = !this.last;
+        if (wich == 1)
+            this.one = !this.one;
+    }
+    },
     setup() {
         
     },
@@ -36,6 +74,7 @@ export default defineComponent({
 }
 
 iframe {
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
 }
+
 </style>

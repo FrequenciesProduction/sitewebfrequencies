@@ -47,10 +47,6 @@ ul > li {
   padding-top: 10vw;
 }
 
-.spacing {
-  margin-top: 10vw;
-}
-
 .button--white {
   display: inline-block;
   border-radius: 4px;
@@ -87,6 +83,41 @@ ul > li {
 .button--blue:hover {
     text-decoration: underline;
     color: #fff;
+}
+
+.button--resume {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #c23636;
+  color: #fff;
+  background-color: #c23636;
+  text-decoration: none;
+  padding: 0.5vw 1vw;
+  margin-left: 0vw;
+  margin-right: 0vw;
+  margin-top: 0vw;
+  margin-bottom: 0.5vw;
+  font-size: small;
+}
+
+.button--resume:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.box--resume {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  margin-bottom: 3vw;
+}
+
+.text--resume {
+  border-radius: 4px;
+  border: 1px solid #c23636;
+  text-align: left;
+  padding: 1vw;
 }
 
 h1 {

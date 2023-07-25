@@ -1,6 +1,7 @@
 <template>
     <div class="projects_page">
         <h1>Nos projets</h1>
+        <img src="/onde_deco.png" alt="">
 
         <div class="projects_box">
 
@@ -54,6 +55,7 @@
             </div>
 
         </div>
+        <img src="/onde_deco.png" alt="">
         
     </div>
 </template>
@@ -75,14 +77,29 @@
 .project {
     border-radius: 8px;
     border: 1px solid black;
-    width: 35%;
+    width: 20%;
     margin-bottom: 5vw;
     overflow: hidden;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.project p {
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .project img {
     width: 100%;
     object-fit: contain;
+}
+
+.project .button--blue {
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    margin-bottom: 1vw;
 }
 
 </style>
