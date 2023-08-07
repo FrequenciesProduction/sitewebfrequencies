@@ -2,7 +2,7 @@
   <main class="main_box" role="main">
     <Intro/>
     <img src="/onde_deco.png" alt="">
-    <h2>Découvrir les derniers projets de Frequencies</h2>
+    <h2 class="section_title">Découvrir les derniers projets de Frequencies</h2>
     <ProjectsMini></ProjectsMini>
     <img src="/onde_deco.png" alt="">
     <Description/>

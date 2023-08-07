@@ -10,27 +10,32 @@
                 <li>
                     <a href="https://www.instagram.com/frequencies.production/" target="blank">
                         <img src="instagram.png" alt="instagram"/>
-                    <span aria-label="ouvre un nouvel onglet"></span></a>
+                        <span aria-label="ouvre un nouvel onglet"></span>
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/frequencies.production" target="blank">
                         <img src="facebook.png" alt="facebook"/>
-                    <span aria-label="ouvre un nouvel onglet"></span></a>
+                        <span aria-label="ouvre un nouvel onglet"></span>
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/channel/UCgxfEuByVQ8X2k5Tk5yVwhg" target="blank">
                         <img src="youtube.png" alt="youtube"/>
-                    <span aria-label="ouvre un nouvel onglet"></span></a>
+                        <span aria-label="ouvre un nouvel onglet"></span>
+                    </a>
                 </li>
                 <li>
                     <a href="mailto:Frequencies.production@gmail.com" target="blank">
                         <img src="email.png" alt="email"/>
-                    <span aria-label="ouvre un nouvel onglet"></span></a>
+                        <span aria-label="ouvre un nouvel onglet"></span>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/" target="blank">
+                    <a href="https://www.linkedin.com/company/frequencies" target="blank">
                         <img src="linkedin.png" alt="linkedin"/>
-                    <span aria-label="ouvre un nouvel onglet"></span></a>
+                        <span aria-label="ouvre un nouvel onglet"></span>
+                    </a>
                 </li>
             </ul>
             
@@ -41,7 +46,7 @@
 <style scoped>
 .footer_box {
     font-size: small;
-    color: #c23636;
+    color: #fff;
 
     width: 100%;
     padding-top: 2vw;

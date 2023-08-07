@@ -6,7 +6,8 @@
         <Instructions></Instructions>
         </div>
 
-        <h2>Le dernier épisode</h2>
+        <h2 class="red_outline">Le dernier épisode</h2>
+        
         <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="box--resume">
         <button @click="toggleText(0)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description du dernier épisode publié"></span></button>
@@ -22,7 +23,8 @@
         </p>
         </div>
 
-        <h2>Tous les épisodes</h2>
+        <h2 class="red_outline">Tous les épisodes</h2>
+        
         <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="box--resume">
         <button @click="toggleText(1)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
@@ -75,6 +77,20 @@ export default defineComponent({
 
 iframe {
     margin-bottom: 0.5vw;
+}
+
+h2 {
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+
+.button--resume {
+    border: 1px solid #c23636;
+    background-color: #c23636;
+}
+
+.text--resume {
+    border: 1px solid #c23636;
 }
 
 </style>

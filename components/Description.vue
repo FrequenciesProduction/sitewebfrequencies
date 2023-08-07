@@ -1,7 +1,7 @@
 <template>
     <div class="description">
         <img src="/qui_sommes_nous_1.png" alt="">
-        <h2>Qui sommes-nous ?</h2>
+        <h2 class="section_title">Qui sommes-nous ?</h2>
         <p>
             Une équipe française investie dans la création et la production de fictions sonores.<br>
             Une association fondée par Aurélien Bernadas, qui s’entoure de nombreuses personnes bénévoles pour accompagner le projet et le faire grandir.
@@ -22,5 +22,10 @@
 .description img {
     width: 100%;
     object-fit: contain;
+}
+
+h2 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 </style>

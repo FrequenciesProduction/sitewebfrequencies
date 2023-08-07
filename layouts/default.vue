@@ -88,9 +88,9 @@ ul > li {
 .button--resume {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #c23636;
+  border: 1px solid black;
   color: #fff;
-  background-color: #c23636;
+  background-color: black;
   text-decoration: none;
   padding: 0.5vw 1vw;
   margin-left: 0vw;
@@ -110,17 +110,46 @@ ul > li {
   display: flex;
   flex-direction: column;
   font-size: small;
-  margin-bottom: 3vw;
+  margin-bottom: 1vw;
 }
 
 .text--resume {
   border-radius: 4px;
-  border: 1px solid #c23636;
+  border: 1px solid black;
   text-align: left;
   padding: 1vw;
 }
 
 h1 {
+    font-weight: bold;
+    font-size: 4vw;
     margin-bottom: 4vw;
 }
+
+.red_outline {
+  color: black; /* default color if stroke not supported */
+  -webkit-text-fill-color: #fff; /* Will override color if stroke is supported */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #c23636;
+}
+
+.blue_outline {
+  color: black; /* default color if stroke not supported */
+  -webkit-text-fill-color: #fff; /* Will override color if stroke is supported */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #166bba;
+}
+
+.black_outline {
+  color: black; /* default color if stroke not supported */
+  -webkit-text-fill-color: #fff; /* Will override color if stroke is supported */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.section_title {
+  font-style: oblique;
+  font-size: 3vw;
+}
+
 </style>

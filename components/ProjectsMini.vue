@@ -2,8 +2,7 @@
     <div class="projects_box">
         
         <div class="project">
-            <img src="/onde_deco.png">
-            <h3>Frequencies</h3>
+            <h3 class="blue_outline">Frequencies</h3>
             <p>
             Présentations et extraits des différents projets frequencies.
             </p>
@@ -11,8 +10,7 @@
         </div>
 
         <div class="project">
-            <img src="/onde_deco.png">
-            <h3>Réminiscence</h3>
+            <h3 class="black_outline">Réminiscence</h3>
             <p>
                 L’aventure d’un homme se mourant dans le désert, dont le passé lui revient en mémoire il va nous raconter son histoire.
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
@@ -22,8 +20,7 @@
         </div>
 
         <div class="project">
-            <img src="/onde_deco.png">
-            <h3>Les Chroniques Sombres</h3>
+            <h3 class="red_outline">Les Chroniques Sombres</h3>
             <p>
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
@@ -38,6 +35,7 @@
 .projects_box {
   padding: 0;
   margin: 0;
+  margin-top: 2vw;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -69,5 +67,10 @@
     margin-top: 1vw;
     margin-bottom: 1vw;
     object-fit: contain;
+}
+
+h3 {
+    margin-top: 2vw;
+    margin-bottom: 3vw;
 }
 </style>
