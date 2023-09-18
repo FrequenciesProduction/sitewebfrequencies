@@ -1,17 +1,17 @@
 <template>
     <div class="projects_box">
         
-        <div class="project">
-            <h3 class="blue_outline">Frequencies</h3>
-            <p>
-            Présentations et extraits des différents projets frequencies.
+        <div class="project project-blue">
+            <h3>Frequencies</h3>
+            <p class="project-desc">
+            Présentations et extraits des différents projets Frequencies.
             </p>
             <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
         </div>
 
-        <div class="project">
-            <h3 class="black_outline">Réminiscence</h3>
-            <p>
+        <div class="project project-black">
+            <h3>Réminiscence</h3>
+            <p class="project-desc">
                 L’aventure d’un homme se mourant dans le désert, dont le passé lui revient en mémoire il va nous raconter son histoire.
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
                 Ferez-vous partie de ceux qui écouteront son histoire ?
@@ -19,9 +19,9 @@
             <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink>
         </div>
 
-        <div class="project">
-            <h3 class="red_outline">Les Chroniques Sombres</h3>
-            <p>
+        <div class="project project-red">
+            <h3>Les Chroniques Sombres</h3>
+            <p class="project-desc">
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
             </p>
@@ -72,5 +72,47 @@
 h3 {
     margin-top: 2vw;
     margin-bottom: 3vw;
+}
+
+.project-blue {
+    background-color: #166bba;
+}
+
+.project-black {
+    background-color: black;
+}
+
+.project-red {
+    background-color: #c23636;
+}
+
+.project-blue h3, .project-blue .project-desc {
+    color: #fff;
+}
+
+.project-black h3, .project-black .project-desc {
+    color: #fff;
+}
+
+.project-red h3, .project-red .project-desc {
+    color: #fff;
+}
+
+.project-red .button--blue {
+    background-color: #fff;
+    color: #c23636;
+}
+/*button--blue */
+
+@media (max-width: 37.5rem) {
+    .project-desc {
+      font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 25rem) {
+    .project-desc {
+      
+    }
 }
 </style>

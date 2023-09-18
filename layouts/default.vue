@@ -1,22 +1,15 @@
 <template>
-    <div class="test">
-        <Nav></Nav>
-        <Nuxt />
-        <Footer></Footer>
-    </div>
+  <div class="test">
+    <Nav></Nav>
+    <Nuxt />
+    <Footer></Footer>
+  </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(15px, 2vw, 20px);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -47,7 +40,7 @@ ul > li {
   padding-top: 10vw;
 }
 
-.button--white {
+a.button--white {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #c23636;
@@ -61,12 +54,12 @@ ul > li {
   margin-bottom: 0.5vw;
 }
 
-.button--white:hover {
-    text-decoration: underline;
-    color: #c23636;
+a.button--white:hover {
+  text-decoration: underline;
+  color: #c23636;
 }
 
-.button--blue {
+a.button--blue {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #c23636;
@@ -81,8 +74,8 @@ ul > li {
 }
 
 .button--blue:hover {
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
 }
 
 .button--resume {
@@ -101,8 +94,8 @@ ul > li {
 }
 
 .button--resume:hover {
-    text-decoration: underline;
-    color: #fff;
+  text-decoration: underline;
+  color: #fff;
 }
 
 .box--resume {
@@ -121,9 +114,9 @@ ul > li {
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 4vw;
-    margin-bottom: 4vw;
+  font-weight: bold;
+  font-size: 4vw;
+  margin-bottom: 4vw;
 }
 
 .red_outline {
@@ -152,4 +145,44 @@ h1 {
   font-size: 3vw;
 }
 
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.desc-outline {
+  padding: .3125rem .625rem .3125rem .625rem;
+  outline: .1875rem solid black;
+  border-radius: .1875rem;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 37.5rem) {
+    .blue_outline, .black_outline, .red_outline {
+      font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 28.125rem) {
+    .blue_outline, .black_outline, .red_outline {
+      font-size: 1rem;
+    }
+}
 </style>

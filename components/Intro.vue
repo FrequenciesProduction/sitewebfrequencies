@@ -15,7 +15,11 @@
         ></a>
       </li>
       <li>
+        <!-- <NuxtLink class="button--white" to="/sponsor">Devenir sponsor</NuxtLink> -->
         <a class="button--white">Devenir sponsor</a>
+      </li>
+      <li>
+        <a class="button--white">Devenir mécène</a>
       </li>
     </ul>
   </div>

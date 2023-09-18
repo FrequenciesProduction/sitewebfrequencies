@@ -38,7 +38,7 @@
                     <div>
                         <h2 class="blue_outline">Frequencies</h2>
                         <p>
-                            Présentations et extraits des différents projets frequencies.
+                            Présentations et extraits des différents projets Frequencies.
                         </p>
                     </div>
                     <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
@@ -138,5 +138,4 @@ h2 {
     margin-bottom: 2vw;
     font-size: 3vw;
 }
-
 </style>

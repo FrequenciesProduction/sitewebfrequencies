@@ -3,9 +3,9 @@
     <img src="/qui_sommes_nous_1.png" alt="" />
     <h2 class="section_title">Qui sommes-nous ?</h2>
     <p>
-      Une équipe française investie dans la création et la production de fictions
+      Frequencies est une équipe française investie dans la création et la production de fictions
       sonores.<br />
-      Une association fondée par Aurélien Bernadas, qui s’entoure de nombreuses personnes
+      L'association a été fondée par Aurélien Bernadas, qui s’entoure de nombreuses personnes
       bénévoles pour accompagner le projet et le faire grandir.
     </p>
   </div>

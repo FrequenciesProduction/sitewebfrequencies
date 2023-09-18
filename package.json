@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "firebase": "nuxt generate && nuxt build && firebase deploy"
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.1",
