@@ -8,7 +8,7 @@
 
         <h2 class="black_outline">Le dernier épisode</h2>
         
-        <iframe title="Lecteur intégré spotify pour écouter l'episode 7 de réminiscence" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7CFhpaPqfvPJwGv5DQ84A1?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe title="Lecteur intégré spotify pour écouter l'episode 7 de réminiscence" class="iframe-ecoute" src="https://open.spotify.com/embed/episode/7CFhpaPqfvPJwGv5DQ84A1?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="box--resume">
         <button @click="toggleText(0)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description du dernier épisode publié"></span></button>
         <p v-show="w0" class="text--resume">
@@ -211,9 +211,7 @@ export default defineComponent({
             this.w7 = !this.w7;
     }
     },
-    setup() {
-        
-    },
+    
     head() {
         return {
             title: "Réminiscence"

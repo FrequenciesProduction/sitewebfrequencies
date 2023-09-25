@@ -17,6 +17,9 @@
       <li>
         <NuxtLink class="button--white" to="/projets">Nos projets</NuxtLink>
       </li>
+      <!-- <li>
+        <NuxtLink class="button--white" to="/emissions">Nos émissions</NuxtLink>
+      </li> -->
       <li>
         <NuxtLink class="button--white" to="/description">Qui sommes nous ?</NuxtLink>
       </li>
@@ -29,6 +32,7 @@
     </ul>
   </header>
 </template>
+
 
 <style scoped>
 /* .bandeau {

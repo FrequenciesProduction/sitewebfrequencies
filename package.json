@@ -7,17 +7,21 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "firebase": "nuxt generate && nuxt build && firebase deploy"
+    "firebase": "cp firebase.js dist/ && nuxt generate && nuxt build && firebase deploy"
   },
   "dependencies": {
     "@vue/composition-api": "^1.7.1",
+    "axios": "^0.21.4",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.25.3",
+    "express": "^4.18.2",
+    "firebase": "^10.4.0",
     "nuxt": "^2.15.8",
+    "tslib": "^2.6.2",
     "vue": "^2.7.10",
+    "vue-rss-parser": "^0.1.0",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
-  },
-  "devDependencies": {}
+  }
 }
