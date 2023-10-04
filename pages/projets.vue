@@ -18,7 +18,8 @@
                             Ferez-vous partie de ceux qui écouteront son histoire ?
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink>
+                    <!-- <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink> -->
+                    <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'reminiscence' }}">J'écoute<span aria-label="Réminiscence"></span></nuxt-link>
                 </div>
 
                 <div class="project">
@@ -30,7 +31,8 @@
                             Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/chroniques">J'écoute<span aria-label="Les Chroniques Sombres"></span></NuxtLink>
+                    <!-- <NuxtLink class="button--blue" to="/chroniques">J'écoute<span aria-label="Les Chroniques Sombres"></span></NuxtLink> -->
+                    <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'les-chroniques-sombres' }}">J'écoute<span aria-label="Les Chroniques Sombres"></span></nuxt-link>
                 </div>
 
                 <div class="project">
@@ -42,6 +44,7 @@
                         </p>
                     </div>
                     <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+                    <!-- <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'extraits' }}">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></nuxt-link> -->
                 </div>
 
             </div>
@@ -63,7 +66,7 @@
 
             </div>
 
-            <img src="/onde_deco.png" alt="">
+            <img class="img-bottom" src="/onde_deco.png" alt="">
 
         </div>
 
@@ -86,6 +89,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+.img-bottom {
+    margin-bottom: 4vw;
+}
 .projects_page {
     width: 100%;
 }

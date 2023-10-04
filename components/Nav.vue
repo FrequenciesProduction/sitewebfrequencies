@@ -21,6 +21,9 @@
         <NuxtLink class="button--white" to="/emissions">Nos émissions</NuxtLink>
       </li> -->
       <li>
+        <NuxtLink class="button--white" to="/projetsv2">Projets V2</NuxtLink>
+      </li>
+      <li>
         <NuxtLink class="button--white" to="/description">Qui sommes nous ?</NuxtLink>
       </li>
       <li>

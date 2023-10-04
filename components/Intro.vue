@@ -5,7 +5,6 @@
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
       de tous
     </p>
-    <!-- <add-emission /> -->
     <ul>
       <li>
         <a
@@ -20,7 +19,8 @@
         <a class="button--white">Devenir sponsor</a>
       </li>
       <li>
-        <a class="button--white">Devenir mécène</a>
+        <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink>
+        <!-- <a class="button--white">Devenir mécène</a> -->
       </li>
     </ul>
   </div>

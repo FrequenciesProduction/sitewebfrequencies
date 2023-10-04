@@ -31,7 +31,7 @@ ul > li {
 }
 
 .main_box {
-  min-height: 10vw;
+  min-height: 14vw;
   display: flex;
   justify-content: center;
   flex-direction: column;

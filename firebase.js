@@ -22,6 +22,5 @@ import { getStorage, ref, deleteObject } from 'firebase/storage';
 const storage = getStorage(app);
 const emissionsBaseUrl = "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/emissions.json";
 const deleteEmissionUrl = "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/emissions/";
-const storageBaseUrl = "gs://frequencies-web.appspot.com/";
 
-export { storage, emissionsBaseUrl, deleteEmissionUrl, storageBaseUrl }
+export { storage, emissionsBaseUrl, deleteEmissionUrl }
