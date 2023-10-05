@@ -7,7 +7,7 @@
                 <div class="project" v-for="projet in projetsData">
                     <img :src="projet.image">
                     <div>
-                        <h2 class="black_outline">{{ projet.titre }}</h2>
+                        <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
                     <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></nuxt-link>
@@ -15,6 +15,17 @@
             </div>
             <img src="/onde_deco.png" alt="">
             <div class="projects_box">
+                <div class="project">
+                    <img src="/logo_facebook.jpg">
+                    <div>
+                        <h2 class="blue_outline">Frequencies</h2>
+                        <p>
+                            Présentations et extraits des différents projets Frequencies.
+                        </p>
+                    </div>
+                    <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+                    <!-- <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'extraits' }}">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></nuxt-link> -->
+                </div>
                 <div class="project">
                     <img src="/logo_facebook.jpg">
                     <div>
@@ -77,9 +88,10 @@ export default defineComponent({
             axios.get(rss).then((res) => {
                 let feedResults = parser.parseString(res.data)
                 feedResults.then(feedData => {
+                    let titleClass = feedData.image.title == "Réminiscence" ? "black_outline" : "red_outline"
                     let descriptionHttpIndex = feedData.description.indexOf("https")
                     let descriptionText = (feedData.description.indexOf("https") != -1) ? feedData.description.substring(0, descriptionHttpIndex-1) : feedData.description
-                    this.projetsData.push({tabTitle: title, titre: feedData.image.title, image: feedData.image.url, description: descriptionText})
+                    this.projetsData.push({tabTitle: title, titre: feedData.image.title, image: feedData.image.url, description: descriptionText, cssClass: titleClass})
                 })
             })
         }

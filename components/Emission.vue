@@ -25,7 +25,6 @@
     let Parser = require('rss-parser');
     let parser = new Parser();
     import { storage, emissionsBaseUrl, deleteEmissionUrl } from '../firebase';
-    import { ref, deleteObject, getDownloadURL } from 'firebase/storage';
 
     export default {
         created() {
@@ -81,42 +80,85 @@
                 let separator = "----------------------------------------------------------------------";
                 let headerPodcastLink = "https://anchor.fm/" + this.name + "/embed/episodes/"
                 let credits
+                let acteurTitle = "Acteur"
+                let designerTitle = "Sound désigner"
+                let compositionTitle = "Composition"
+                let mixageTitle = "Mixage / Mastering"
                 items.forEach((itemObject) => {
                     let testSeparator
                     let content = itemObject.content
-                    let idxSeparator = content.indexOf(separator)
-                    let premierePartie = content.substring(0, idxSeparator -1)
-                    let secondePartieTemp = (content.substring(idxSeparator + separator.length +1)).trim()
-                    let idxPodcast = secondePartieTemp.indexOf("---")
-                    let secondePartie = (secondePartieTemp.substring(0, idxPodcast)).replaceAll(/\u00A0/gi, " ")
-                    let troisiemePartieTemp =  secondePartieTemp.substring(idxPodcast + 1)
-                    let troisiemePartie = troisiemePartieTemp.replace("-- ","")
-                    testSeparator = secondePartie.indexOf("    ")
-                    if(testSeparator !== -1) {
-                        credits = secondePartie.split("    ")
-                    } else if(secondePartie.indexOf("   ") !== -1) {
-                        credits = secondePartie.split("   ")
-                    } else if(secondePartie.indexOf("  ") !== -1) {
-                        credits = secondePartie.split("  ")
-                    } 
-                   
-                    let acteurs = credits[0];
-                    let sounDesigner = credits[1];
-                    let composition = credits[2];
-                    let mixage = credits[3];
+                    let ulPosition = content.indexOf("<ul>")
+                    if(ulPosition !== -1) {
+                        let ulLastPosition = content.indexOf("</ul>")
+                        let contentListeActeurs = content.substring(ulPosition +5, ulLastPosition)
+                        let listeActeurs = contentListeActeurs.split("<li>")
+                        let indexDesc = content.indexOf("<p>")
+                        let lastIndexDesc = content.indexOf("</p>")
+                        let description = content.substring(indexDesc+3, lastIndexDesc)
+                        itemObject.description = description
+                        for(const idx in listeActeurs) {
+                            let contentActeurs = listeActeurs[idx].trim()
+                            if(contentActeurs !== "") {
+                                let replacedContentActeurs = contentActeurs.replace("</li>", "")
+                                let rolesTab = replacedContentActeurs.split(":")
+                                let roleName = rolesTab[0].trim()
+                                let roleValue = rolesTab[1].trim()
+                                switch(roleName) {
+                                    case 'Acteur':
+                                        itemObject.acteurs = roleName + ": " + roleValue
+                                        break
+                                    case 'Sound désigner':
+                                        itemObject.sounDesigner = roleName + ": " + roleValue
+                                        break
+                                    case 'Composition':
+                                        itemObject.composition = roleName + ": " + roleValue
+                                        break
+                                    case 'Mixage / Mastering':
+                                        itemObject.mixage = roleName + ": " + roleValue
+                                        break
+                                }
+                            }
+                        }
+                    } else {
+                        let idxSeparator = content.indexOf(separator)
+                        let premierePartie = content.substring(0, idxSeparator -1)
+                        let secondePartieTemp = (content.substring(idxSeparator + separator.length +1)).trim()
+                        let idxPodcast = secondePartieTemp.indexOf("---")
+                        let secondePartie = (secondePartieTemp.substring(0, idxPodcast)).replaceAll(/\u00A0/gi, "")
+                        let troisiemePartieTemp =  secondePartieTemp.substring(idxPodcast + 1)
+                        let troisiemePartie = troisiemePartieTemp.replace("-- ","")
+                        testSeparator = secondePartie.indexOf("    ")
+                        if(testSeparator !== -1) {
+                            credits = secondePartie.split("    ")
+                        } else if(secondePartie.indexOf("   ") !== -1) {
+                            credits = secondePartie.split("   ")
+                        } else if(secondePartie.indexOf("  ") !== -1) {
+                            credits = secondePartie.split("  ")
+                        } else {
+                            const acteursIdx = secondePartie.indexOf(acteurTitle)
+                            const designerIdx = secondePartie.indexOf(designerTitle)
+                            const compositionIdx = secondePartie.indexOf(compositionTitle)
+                            const mixageIdx = secondePartie.indexOf(mixageTitle)
+                            const acteurs = (secondePartie.substring(acteursIdx, designerIdx)).trim()
+                            const sounDesigner = (secondePartie.substring(designerIdx, compositionIdx)).trim()
+                            const composition = (secondePartie.substring(compositionIdx, mixageIdx)).trim()
+                            const mixage = (secondePartie.substring(mixageIdx)).trim()
+                            itemObject.acteurs = acteurs
+                            itemObject.sounDesigner = sounDesigner
+                            itemObject.composition = composition
+                            itemObject.mixage = mixage
+                        }                        
+                        itemObject.description = premierePartie
+                        itemObject.podcast = troisiemePartie
+                    }
                     let image = itemObject.itunes.image;
                     let podcastUrl = itemObject.link
                     let podTab = podcastUrl.split("/");
-                    itemObject.link = headerPodcastLink + podTab[7]
-                    itemObject.description = premierePartie
-                    itemObject.acteurs = acteurs
-                    itemObject.sounDesigner = sounDesigner
-                    itemObject.composition = composition
                     itemObject.image = image
-                    itemObject.mixage = mixage
-                    itemObject.podcast = troisiemePartie
+                    itemObject.link = headerPodcastLink + podTab[7]
                     this.emissionsData.push({itemObject})
                 })
+                
             }
         }
     }
