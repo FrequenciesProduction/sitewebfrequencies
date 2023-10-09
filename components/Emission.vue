@@ -54,6 +54,7 @@
                 // https://anchor.fm/s/29441e74/podcast/rss | reminiscence
                 // https://anchor.fm/s/5b4caa58/podcast/rss | chroniques          
                 axios.get(this.sourceFile).then((res) => {
+                    // console.log(res)
                     let feedResults = parser.parseString(res.data)
                     feedResults.then(feedData => {
                         this.formatPostData(feedData);
@@ -79,86 +80,71 @@
                 let items = feedData.items
                 let separator = "----------------------------------------------------------------------";
                 let headerPodcastLink = "https://anchor.fm/" + this.name + "/embed/episodes/"
-                let credits
                 let acteurTitle = "Acteur"
                 let designerTitle = "Sound désigner"
                 let compositionTitle = "Composition"
-                let mixageTitle = "Mixage / Mastering"
+                let mixageTitle = "Mixage"
+                let description
+                console.log(items)
                 items.forEach((itemObject) => {
-                    let testSeparator
-                    let content = itemObject.content
+                    let content = this.parseHtmlEntities(itemObject.content)
+                    let indexDesc = content.indexOf("<p>")
+                    let lastIndexDesc = content.indexOf("</p>")
                     let ulPosition = content.indexOf("<ul>")
-                    if(ulPosition !== -1) {
-                        let ulLastPosition = content.indexOf("</ul>")
-                        let contentListeActeurs = content.substring(ulPosition +5, ulLastPosition)
-                        let listeActeurs = contentListeActeurs.split("<li>")
-                        let indexDesc = content.indexOf("<p>")
-                        let lastIndexDesc = content.indexOf("</p>")
-                        let description = content.substring(indexDesc+3, lastIndexDesc)
-                        itemObject.description = description
-                        for(const idx in listeActeurs) {
-                            let contentActeurs = listeActeurs[idx].trim()
-                            if(contentActeurs !== "") {
-                                let replacedContentActeurs = contentActeurs.replace("</li>", "")
-                                let rolesTab = replacedContentActeurs.split(":")
-                                let roleName = rolesTab[0].trim()
-                                let roleValue = rolesTab[1].trim()
-                                switch(roleName) {
-                                    case 'Acteur':
-                                        itemObject.acteurs = roleName + ": " + roleValue
-                                        break
-                                    case 'Sound désigner':
-                                        itemObject.sounDesigner = roleName + ": " + roleValue
-                                        break
-                                    case 'Composition':
-                                        itemObject.composition = roleName + ": " + roleValue
-                                        break
-                                    case 'Mixage / Mastering':
-                                        itemObject.mixage = roleName + ": " + roleValue
-                                        break
-                                }
+                    let nextParagraphe = this.getPosition(content, "<p>", 2)
+                    let nextFinParagraphe = this.getPosition(content, "</p>", 2)
+                    let paragrapheContent = (content.substring(nextParagraphe+3, nextFinParagraphe)).trim()
+                    if(paragrapheContent !== separator) {
+                        description = content.substring(nextParagraphe+3, nextFinParagraphe)
+                    } else {
+                        description = content.substring(indexDesc+3, lastIndexDesc)
+                    }
+                    let ulLastPosition = content.indexOf("</ul>")
+                    let contentListeActeurs = content.substring(ulPosition +5, ulLastPosition)
+                    let listeActeurs = contentListeActeurs.split("<li>")
+                    itemObject.description = description
+                    for(const idx in listeActeurs) {
+                        let contentActeurs = listeActeurs[idx].trim()
+                        if(contentActeurs !== "") {
+                            let replacedContentActeurs = contentActeurs.replace("</li>", "")
+                            let rolesTab = replacedContentActeurs.split(":")
+                            let roleName = rolesTab[0].trim()
+                            let roleValue = rolesTab[1].trim()
+                            switch(roleName) {
+                                case acteurTitle:
+                                    itemObject.acteurs = roleName + ": " + roleValue
+                                    break
+                                case designerTitle:
+                                case 'Sound designer':
+                                    itemObject.sounDesigner = roleName + ": " + roleValue
+                                    break
+                                case compositionTitle:
+                                    itemObject.composition = roleName + ": " + roleValue
+                                    break
+                                case mixageTitle:
+                                    itemObject.mixage = roleName + ": " + roleValue
+                                    break
                             }
                         }
-                    } else {
-                        let idxSeparator = content.indexOf(separator)
-                        let premierePartie = content.substring(0, idxSeparator -1)
-                        let secondePartieTemp = (content.substring(idxSeparator + separator.length +1)).trim()
-                        let idxPodcast = secondePartieTemp.indexOf("---")
-                        let secondePartie = (secondePartieTemp.substring(0, idxPodcast)).replaceAll(/\u00A0/gi, "")
-                        let troisiemePartieTemp =  secondePartieTemp.substring(idxPodcast + 1)
-                        let troisiemePartie = troisiemePartieTemp.replace("-- ","")
-                        testSeparator = secondePartie.indexOf("    ")
-                        if(testSeparator !== -1) {
-                            credits = secondePartie.split("    ")
-                        } else if(secondePartie.indexOf("   ") !== -1) {
-                            credits = secondePartie.split("   ")
-                        } else if(secondePartie.indexOf("  ") !== -1) {
-                            credits = secondePartie.split("  ")
-                        } else {
-                            const acteursIdx = secondePartie.indexOf(acteurTitle)
-                            const designerIdx = secondePartie.indexOf(designerTitle)
-                            const compositionIdx = secondePartie.indexOf(compositionTitle)
-                            const mixageIdx = secondePartie.indexOf(mixageTitle)
-                            const acteurs = (secondePartie.substring(acteursIdx, designerIdx)).trim()
-                            const sounDesigner = (secondePartie.substring(designerIdx, compositionIdx)).trim()
-                            const composition = (secondePartie.substring(compositionIdx, mixageIdx)).trim()
-                            const mixage = (secondePartie.substring(mixageIdx)).trim()
-                            itemObject.acteurs = acteurs
-                            itemObject.sounDesigner = sounDesigner
-                            itemObject.composition = composition
-                            itemObject.mixage = mixage
-                        }                        
-                        itemObject.description = premierePartie
-                        itemObject.podcast = troisiemePartie
                     }
                     let image = itemObject.itunes.image;
                     let podcastUrl = itemObject.link
+                    console.log(podcastUrl)
                     let podTab = podcastUrl.split("/");
                     itemObject.image = image
                     itemObject.link = headerPodcastLink + podTab[7]
                     this.emissionsData.push({itemObject})
                 })
                 
+            },
+            parseHtmlEntities(str) {
+                return str.replace(/&#([0-9]{1,3});/gi, function(match, numStr) {
+                    let num = parseInt(numStr, 10);
+                    return String.fromCharCode(num);
+                });
+            },
+            getPosition(string, subString, index) {
+                return string.split(subString, index).join(subString).length;
             }
         }
     }

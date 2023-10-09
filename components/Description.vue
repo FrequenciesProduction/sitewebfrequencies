@@ -6,7 +6,7 @@
       Frequencies est une équipe française investie dans la création et la production de fictions
       sonores.<br />
       L'association a été fondée par Aurélien Bernadas, qui s’entoure de nombreuses personnes
-      bénévoles pour accompagner le projet et le faire grandir.
+      bénévoles et professionnel.les pour accompagner le projet et le faire grandir.
     </p>
   </div>
 </template>
