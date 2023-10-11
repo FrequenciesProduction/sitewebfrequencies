@@ -18,10 +18,14 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import Intro from "../components/Intro.vue";
+import ProjectsMini from "../components/ProjectsMini.vue";
+import Description from "./description.vue";
 
 export default defineComponent({
+  components: {Description, ProjectsMini, Intro},
     setup() {
-        
+
     },
     head() {
         return {
