@@ -1,0 +1,30 @@
+.footer_box {
+  font-size: small;
+  color: #fff;
+
+  width: 100%;
+  padding-top: 2vw;
+
+  background-image: linear-gradient(to top, rgba(20, 20, 20, 1) 90%, rgba(20, 20, 20, 0));
+  background-position: start start;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+img {
+  border-radius: 8px;
+  border: 1px solid #c23636;
+  overflow: hidden;
+  width: clamp(34px, 4vw, 300px);
+  height: clamp(34px, 4vw, 300px);
+  margin: 1vw;
+  background-color: #fff;
+  padding: 0.5vw;
+}
+
+p {
+  margin-left: 1vw;
+}

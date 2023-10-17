@@ -17,10 +17,10 @@
 </style>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
-import Intro from "../components/Intro.vue";
-import ProjectsMini from "../components/ProjectsMini.vue";
-import Description from "./description.vue";
+import {defineComponent} from '@vue/composition-api'
+import Intro from "../components/intro/intro.vue";
+import ProjectsMini from "../components/projectsMIni/projectsMini.vue";
+import Description from "./Description/description.vue";
 
 export default defineComponent({
   components: {Description, ProjectsMini, Intro},
