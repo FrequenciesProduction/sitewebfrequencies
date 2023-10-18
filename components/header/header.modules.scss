@@ -7,6 +7,10 @@ body {
 /* header */
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 5px;
   background-image: linear-gradient(#141414 90%, hsla(0, 0%, 8%, 0));
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -137,6 +141,7 @@ ul.menu > li > a {
 /* Media queries */
 /* 750 */
 @media (min-width: 46.875rem) {
+
   .header li {
     float: left;
   }

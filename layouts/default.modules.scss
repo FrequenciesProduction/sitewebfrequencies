@@ -51,8 +51,10 @@ a.button--blue {
   padding: 1vw 2vw;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
-  margin-top: 1vw;
+  margin-top: 0.5vw;
   margin-bottom: 0.5vw;
+  width: 150px;
+  height: 89px;
 }
 
 .button--blue:hover {
@@ -153,6 +155,7 @@ h1 {
   }
   .header .menu-icon {
     display: none;
+    //margin-left: 200px;
   }
 }
 
