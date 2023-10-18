@@ -19,8 +19,8 @@
         <a class="button--white">Devenir sponsor</a>
       </li>
       <li>
-        <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink>
-        <!-- <a class="button--white">Devenir mécène</a> -->
+        <!-- <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink> -->
+        <a class="button--white">Devenir mécène</a>
       </li>
     </ul>
   </div>

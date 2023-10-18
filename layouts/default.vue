@@ -9,3 +9,5 @@
 <style>
 @import './default.modules.scss';
 </style>
+<script setup>
+</script>

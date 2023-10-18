@@ -1,11 +1,11 @@
 .projects_box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-top: 3vw;
 }
 
-.project {
+/*.project {
   border-radius: .5rem;
   border: .0625rem solid black;
   width: 90%;
@@ -15,7 +15,7 @@
   display: flex;
   text-align: center;
   align-items: center;
-}
+}*/
 
 .project div {
   padding: 1vw;
@@ -46,4 +46,11 @@
 h2 {
   margin-bottom: 2vw;
   font-size: 3vw;
+}
+
+@media (max-width: 46.875rem) {
+  .projects_box {
+    display: flex;
+    flex-direction: column;
+  }
 }
