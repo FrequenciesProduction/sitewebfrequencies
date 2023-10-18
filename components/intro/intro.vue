@@ -5,7 +5,7 @@
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
       de tous
     </p>
-    <ul>
+    <ul class="button-box">
       <li>
         <a
           class="button--white"

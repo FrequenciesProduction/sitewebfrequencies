@@ -34,20 +34,11 @@ ul > li {
 a.button--white {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #c23636;
   color: #c23636;
   background-color: #fff;
   text-decoration: none;
   padding: 1vw 2vw;
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
-  margin-top: 1vw;
-  margin-bottom: 0.5vw;
-}
-
-a.button--white:hover {
-  text-decoration: underline;
-  color: #c23636;
+  margin: 0.5vw 0.5vw 1vw 0.5vw;
 }
 
 a.button--blue {
