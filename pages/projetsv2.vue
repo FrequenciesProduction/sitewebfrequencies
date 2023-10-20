@@ -2,7 +2,7 @@
     <main class="main_box" role="main">
         <div class="projects_page">
             <h1>Nos projets</h1>
-            <img src="/onde_deco.png" alt="">
+            <img src="img/onde_deco.png" alt="">
             <div class="projects_box">
                 <div class="project" v-for="projet in projetsData">
                     <img :src="projet.image">
@@ -10,55 +10,51 @@
                         <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
-                    <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></nuxt-link>
+                    <router-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link>
                 </div>
             </div>
-            <img src="/onde_deco.png" alt="">
+            <img src="img/onde_deco.png" alt="">
             <div class="projects_box">
                 <div class="project">
-                    <img src="/logo_facebook.jpg">
+                    <img src="img/logo_facebook.jpg">
                     <div>
                         <h2 class="blue_outline">Frequencies</h2>
                         <p>
                             Présentations et extraits des différents projets Frequencies.
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
-                    <!-- <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'extraits' }}">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></nuxt-link> -->
+                    <router-link class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
                 </div>
                 <div class="project">
-                    <img src="/logo_facebook.jpg">
+                    <img src="img/logo_facebook.jpg">
                     <div>
                         <h2 class="red_outline">Courts Métrages</h2>
                         <p>
                             Accès aux cours métrages de Frequencies sur la chaine Youtube.
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/videos">Je regarde<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+                    <router-link class="button--blue" to="/videos">Je regarde<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
                 </div>
 
             </div>
-            <img class="img-bottom" src="/onde_deco.png" alt="">
+            <img class="img-bottom" src="img/onde_deco.png" alt="">
         </div>
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Nos Projets'
+  })
+</script>
 <script>
 import { defineComponent } from '@vue/composition-api'
-let axios = require('axios');
-let Parser = require('rss-parser');
-let parser = new Parser();
+import axios from 'axios'
+import Parser from 'rss-parser'
+let parser = new Parser()
 import { emissionsBaseUrl } from '../firebase';
 
 export default defineComponent({
-    setup() {
-        
-    },
-    head() {
-        return {
-            title: "Nos Projets"
-        };
-    },
     data() {
         return {
             projetsData: '',
@@ -83,9 +79,10 @@ export default defineComponent({
                 const rssProjet = projets[projet].rss
                 this.readRssFile(rssProjet, tabProjetTitle)
             }
+            console.log(this.projetsData)
         },
-        readRssFile(rss, title) {
-            axios.get(rss).then((res) => {
+        readRssFile(rssUrl, title) {
+            axios.get(rssUrl).then((res) => {
                 let feedResults = parser.parseString(res.data)
                 feedResults.then(feedData => {
                     let titleClass = feedData.image.title == "Réminiscence" ? "black_outline" : "red_outline"

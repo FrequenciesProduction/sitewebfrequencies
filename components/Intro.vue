@@ -15,12 +15,12 @@
         ></a>
       </li>
       <li>
-        <!-- <NuxtLink class="button--white" to="/sponsor">Devenir sponsor</NuxtLink> -->
+        <!-- <router-link class="button--white" to="/sponsor">Devenir sponsor</router-link> -->
         <a class="button--white">Devenir sponsor</a>
       </li>
       <li>
-        <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink>
-        <!-- <a class="button--white">Devenir mécène</a> -->
+        <!-- <router-link class="button--white" to="/mecene">Devenir mécène</router-link> -->
+        <a class="button--white">Devenir mécène</a>
       </li>
     </ul>
   </div>
@@ -29,7 +29,7 @@
 <style scoped>
 .intro {
   color: #fff;
-  background-image: url("/image_accueil.png");
+  background-image: url("/img/image_accueil.png");
   width: 100%;
   height: 100%;
   background-size: cover;

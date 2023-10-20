@@ -177,6 +177,12 @@
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Réminiscence'
+  })
+</script>
+
 <script>
 import { defineComponent } from '@vue/composition-api'
 
@@ -210,12 +216,6 @@ export default defineComponent({
         if (wich == 7)
             this.w7 = !this.w7;
     }
-    },
-    
-    head() {
-        return {
-            title: "Réminiscence"
-        };
     }
 })
 </script>

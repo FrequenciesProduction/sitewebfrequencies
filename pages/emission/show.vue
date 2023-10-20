@@ -3,19 +3,25 @@
         <div class="projects_page">
             <h1>{{ title }}</h1>
             <Emission/>
-            <!-- <NuxtLink class="button--white" to="/emission/ajout">Ajouter une émission</NuxtLink>
+            <!-- <router-link class="button--white" to="/emission/ajout">Ajouter une émission</router-link>
             <emissions></emissions> -->
         </div>
     </main>
 </template>
 
-<script>
-    let axios = require('axios');
-    let Parser = require('rss-parser');
-    let parser = new Parser();
-    import { storage, emissionsBaseUrl, deleteEmissionUrl } from '../../firebase';
+<script setup>
+    const route = useRoute()
+    console.log(route)
+</script>
 
-    export default {
+<script>
+    import axios from 'axios'
+    import Parser from 'rss-parser'
+    let parser = new Parser()
+    import { storage, emissionsBaseUrl, deleteEmissionUrl } from '../../firebase';
+    import { defineComponent } from '@vue/composition-api'
+
+    export default defineComponent({
         created() {
             const params = this.$route.params
             this.name = params.emissionTitle
@@ -32,8 +38,10 @@
         },
         methods: {
             async getData() {
+                console.log(this.name)
                 await axios.get(emissionsBaseUrl + '?orderBy="titre"&equalTo="'+this.name+'"').then((response) => {
                     let obj = response.data
+                    console.log(obj)
                     let objKey = Object.keys(obj)[0]
                     let sourceValue = obj[objKey].rss
                     this.fichier = sourceValue
@@ -47,7 +55,7 @@
 
             },
         }
-    }
+    })
 </script>
 
 <style scoped>

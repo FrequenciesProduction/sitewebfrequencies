@@ -1,30 +1,24 @@
 <template>
   <header class="header" role="banner">
-      <a href="/" class="logo" aria-label="retour à l'accueil">
-        <img
-          class="img-logo"
-          src="/logo_facebook.jpg"
-          alt="logo frequencies"
-          width="64"
-          height="64"
-        />
-      </a>
+      <NuxtLink to="/" class="logo" aria-label="retour à l'accueil">
+        <img class="img-logo" src="img/logo_facebook.jpg" alt="logo frequencies" width="64" height="64"/>
+      </NuxtLink>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn">
       <span class="navicon"></span>
     </label>
     <ul class="menu">
       <li>
-        <NuxtLink class="button--white" to="/projets">Nos projets</NuxtLink>
+        <router-link class="button--white" to="/projets">Nos projets</router-link>
       </li>
       <!-- <li>
-        <NuxtLink class="button--white" to="/emissions">Nos émissions</NuxtLink>
+        <router-link class="button--white" to="/emissions">Nos émissions</router-link>
       </li> -->
       <li>
-        <NuxtLink class="button--white" to="/projetsv2">Projets V2</NuxtLink>
+        <router-link class="button--white" to="/projetsv2">Projets V2</router-link>
       </li>
       <li>
-        <NuxtLink class="button--white" to="/description">Qui sommes nous ?</NuxtLink>
+        <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>
       </li>
       <li>
         <a class="button--blue" href="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies" target="blank">
@@ -38,52 +32,11 @@
 
 
 <style scoped>
-/* .bandeau {
-  z-index: 1000;
-  position: fixed;
-  width: 100%;
-  background-image: linear-gradient(rgba(20, 20, 20, 1) 90%, rgba(20, 20, 20, 0));
-}
-.logo {
-  border-radius: 8px;
-  border: 1px solid #c23636;
-  overflow: hidden;
-  width: clamp(34px, 4vw, 300px);
-  margin: 1vw;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.nav_list {
-  margin-right: 0.5vw;
-}
-
 body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
 }
-
-a {
-  color: #000;
-} */
-
-/* header */
-
-body {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color: #f4f4f4;
-}
-
-/* header */
 
 .header {
   background-image: linear-gradient(#141414 90%, hsla(0, 0%, 8%, 0));

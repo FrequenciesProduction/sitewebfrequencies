@@ -9,31 +9,31 @@
             <ul>
                 <li>
                     <a href="https://www.instagram.com/frequencies.production/" target="blank">
-                        <img src="instagram.png" alt="instagram"/>
+                        <img src="img/instagram.png" alt="instagram"/>
                         <span aria-label="ouvre un nouvel onglet"></span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/frequencies.production" target="blank">
-                        <img src="facebook.png" alt="facebook"/>
+                        <img src="img/facebook.png" alt="facebook"/>
                         <span aria-label="ouvre un nouvel onglet"></span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/channel/UCgxfEuByVQ8X2k5Tk5yVwhg" target="blank">
-                        <img src="youtube.png" alt="youtube"/>
+                        <img src="img/youtube.png" alt="youtube"/>
                         <span aria-label="ouvre un nouvel onglet"></span>
                     </a>
                 </li>
                 <li>
                     <a href="mailto:Frequencies.production@gmail.com" target="blank">
-                        <img src="email.png" alt="email"/>
+                        <img src="img/email.png" alt="email"/>
                         <span aria-label="ouvre un nouvel onglet"></span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/company/frequencies" target="blank">
-                        <img src="linkedin.png" alt="linkedin"/>
+                        <img src="img/linkedin.png" alt="linkedin"/>
                         <span aria-label="ouvre un nouvel onglet"></span>
                     </a>
                 </li>

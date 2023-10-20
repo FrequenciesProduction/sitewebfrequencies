@@ -6,7 +6,7 @@
             <p class="project-desc">
             Présentations et extraits des différents projets Frequencies.
             </p>
-            <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+            <router-link class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
         </div>
 
         <div class="project project-black">
@@ -16,7 +16,7 @@
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
                 Ferez-vous partie de ceux qui écouteront son histoire ?
             </p>
-            <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink>
+            <router-link class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></router-link>
         </div>
 
         <div class="project project-red">
@@ -25,7 +25,7 @@
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
             </p>
-            <NuxtLink style="position: relative;" class="button--blue" to="/chroniques" >J'écoute<span aria-label="Les Chroniques Sombres"></span></NuxtLink>
+            <router-link style="position: relative;" class="button--blue" to="/chroniques" >J'écoute<span aria-label="Les Chroniques Sombres"></span></router-link>
         </div>
 
     </div>
@@ -107,12 +107,6 @@ h3 {
 @media (max-width: 37.5rem) {
     .project-desc {
       font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 25rem) {
-    .project-desc {
-      
     }
 }
 </style>

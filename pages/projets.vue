@@ -4,12 +4,12 @@
         <div class="projects_page">
             
             <h1>Nos projets</h1>
-            <img src="/onde_deco.png" alt="">
+            <img src="img/onde_deco.png" alt="">
 
             <div class="projects_box">
 
                 <div class="project">
-                    <img src="/reminiscences.png">
+                    <img src="img/reminiscences.png">
                     <div>
                         <h2 class="black_outline">Réminiscence</h2>
                         <p>
@@ -18,12 +18,12 @@
                             Ferez-vous partie de ceux qui écouteront son histoire ?
                         </p>
                     </div>
-                    <!-- <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink> -->
-                    <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'reminiscence' }}">J'écoute<span aria-label="Réminiscence"></span></nuxt-link>
+                    <!-- <router-link class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></router-linkink> -->
+                    <router-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'reminiscence' }}">J'écoute<span aria-label="Réminiscence"></span></router-link>
                 </div>
 
                 <div class="project">
-                    <img src="/chroniques_sombres.png">
+                    <img src="img/chroniques_sombres.png">
                     <div>
                         <h2 class="red_outline">Les Chroniques Sombres</h2>
                         <p>
@@ -31,60 +31,59 @@
                             Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
                         </p>
                     </div>
-                    <!-- <NuxtLink class="button--blue" to="/chroniques">J'écoute<span aria-label="Les Chroniques Sombres"></span></NuxtLink> -->
-                    <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'les-chroniques-sombres' }}">J'écoute<span aria-label="Les Chroniques Sombres"></span></nuxt-link>
+                    <!-- <router-link class="button--blue" to="/chroniques">J'écoute<span aria-label="Les Chroniques Sombres"></span></router-link> -->
+                    <router-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'les-chroniques-sombres' }}">J'écoute<span aria-label="Les Chroniques Sombres"></span></router-link>
                 </div>
 
                 <div class="project">
-                    <img src="/logo_facebook.jpg">
+                    <img src="img/logo_facebook.jpg">
                     <div>
                         <h2 class="blue_outline">Frequencies</h2>
                         <p>
                             Présentations et extraits des différents projets Frequencies.
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
-                    <!-- <nuxt-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'extraits' }}">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></nuxt-link> -->
+                    <router-link class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
+                    <!-- <router-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: 'extraits' }}">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></router-link> -->
                 </div>
 
             </div>
 
-            <img src="/onde_deco.png" alt="">
+            <img src="img/onde_deco.png" alt="">
 
             <div class="projects_box">
 
                 <div class="project">
-                    <img src="/logo_facebook.jpg">
+                    <img src="img/logo_facebook.jpg">
                     <div>
                         <h2 class="red_outline">Courts Métrages</h2>
                         <p>
                             Accès aux cours métrages de Frequencies sur la chaine Youtube.
                         </p>
                     </div>
-                    <NuxtLink class="button--blue" to="/videos">Je regarde<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+                    <router-link class="button--blue" to="/videos">Je regarde<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
                 </div>
 
             </div>
 
-            <img class="img-bottom" src="/onde_deco.png" alt="">
+            <img class="img-bottom" src="img/onde_deco.png" alt="">
 
         </div>
 
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Nos Projets'
+  })
+</script>
+
 <script>
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
-    setup() {
-        
-    },
-    head() {
-        return {
-            title: "Nos Projets"
-        };
-    }
+
 })
 </script>
 
