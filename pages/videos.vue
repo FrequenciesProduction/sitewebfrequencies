@@ -7,18 +7,17 @@
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Courts Métrages'
+  })
+</script>
+
 <script>
 import {defineComponent} from '@vue/composition-api'
 
 export default defineComponent({
-    setup() {
 
-    },
-    head() {
-        return {
-            title: "Courts Métrages"
-        };
-    }
 })
 </script>
 

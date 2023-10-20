@@ -34,6 +34,12 @@
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Les Chroniques Sombres'
+  })
+</script>
+
 <script>
 import {defineComponent} from '@vue/composition-api'
 
@@ -49,14 +55,6 @@ export default defineComponent({
         if (wich == 1)
             this.one = !this.one;
     }
-    },
-    setup() {
-
-    },
-    head() {
-        return {
-            title: "Les Chroniques Sombres"
-        };
     }
 })
 </script>

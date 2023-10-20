@@ -4,6 +4,13 @@
         </div>
     </main>
 </template>
+
+<script setup>
+  useHead({
+    title: 'Devenir un sponsor'
+  })
+</script>
+
 <style>
   @import '/assets/styles/sponsor.modules.scss';
 </style>

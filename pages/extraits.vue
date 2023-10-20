@@ -53,6 +53,12 @@
     </main>
 </template>
 
+<script setup>
+  useHead({
+    title: 'Extraits des Projets Frequencies'
+  })
+</script>
+
 <script>
 import {defineComponent} from '@vue/composition-api'
 
@@ -74,14 +80,6 @@ export default defineComponent({
         if (wich == 4)
             this.w4 = !this.w4;
     }
-    },
-    setup() {
-
-    },
-    head() {
-        return {
-            title: "Extraits des Projets Frequencies"
-        };
     }
 })
 </script>

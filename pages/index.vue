@@ -18,7 +18,6 @@
 
 <script setup>
 import ProjectsMini from '~/components/projectsMIni/projectsMini.vue';
-
   useHead({
     title: 'Frequencies'
   })

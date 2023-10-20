@@ -10,6 +10,9 @@
 </template>
 
 <script setup>
+    useHead({
+        title: 'Les Chroniques Sombres'
+    })
     const route = useRoute()
     console.log(route)
 </script>
