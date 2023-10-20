@@ -87,5 +87,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import './extraits.modules.scss';
+  @import '/assets/styles/extraits.modules.scss';
 </style>

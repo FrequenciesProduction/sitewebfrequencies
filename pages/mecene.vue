@@ -20,5 +20,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import './mecene.modules.scss';
+  @import '/assets/styles/mecene.modules.scss';
 </style>

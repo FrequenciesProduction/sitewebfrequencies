@@ -62,5 +62,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import './chroniques.modules.scss';
+    @import '/assets/styles/chroniques.modules.scss';
 </style>

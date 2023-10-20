@@ -5,5 +5,5 @@
     </main>
 </template>
 <style>
-@import './sponsor.modules.scss';
+  @import '/assets/styles/sponsor.modules.scss';
 </style>

@@ -10,7 +10,7 @@
                         <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
-                    <router-link class="button--blue" :to="{ name: 'emission-show', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link>
+                    <router-link class="button--blue" :to="{ name: 'emission', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link>
                 </div>
             </div>
             <img src="img/onde_deco.png" alt="">
@@ -97,60 +97,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-.img-bottom {
-    margin-bottom: 4vw;
-}
-.projects_page {
-    width: 100%;
-}
-.projects_page img {
-    width: 100%;
-    object-fit: contain;
-}
-.projects_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3vw;
-}
-
-.project {
-    border-radius: 8px;
-    border: 1px solid black;
-    width: 90%;
-    height: 14vw;
-    margin-bottom: 5vw;
-    overflow: hidden;
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
-
-.project div {
-    padding: 1vw;
-    margin: auto;
-}
-
-.project div p {
-    height: 7vw;
-    overflow: auto;
-}
-
-.project img {
-    width: 20vw;
-    object-fit: contain;
-    margin-right: 1vw;
-}
-
-.project .button--blue {
-    text-align: center;
-    margin: auto;
-    margin-right: 1vw;
-}
-
-h2 {
-    margin-bottom: 2vw;
-    font-size: 3vw;
-}
+    @import '/assets/styles/projets.modules.scss';
 </style>

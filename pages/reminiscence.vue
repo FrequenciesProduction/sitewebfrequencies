@@ -224,5 +224,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import './reminiscence.modules.scss';
+  @import '/assets/styles/reminiscence.modules.scss';
 </style>
