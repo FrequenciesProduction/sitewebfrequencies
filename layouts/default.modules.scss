@@ -31,37 +31,6 @@ ul > li {
   padding-top: 0vw;
 }
 
-a.button--white {
-  display: inline-block;
-  border-radius: 4px;
-  color: #c23636;
-  background-color: #fff;
-  text-decoration: none;
-  padding: 1vw 2vw;
-  margin: 0.5vw 0.5vw 1vw 0.5vw;
-}
-
-a.button--blue {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #c23636;
-  color: #fff;
-  background-color: #c23636;
-  text-decoration: none;
-  padding: 1vw 2vw;
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
-  margin-top: 0.5vw;
-  margin-bottom: 0.5vw;
-  width: 150px;
-  height: 89px;
-}
-
-.button--blue:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
 .button--resume {
   display: inline-block;
   border-radius: 4px;

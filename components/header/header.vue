@@ -5,11 +5,9 @@
           class="img-logo"
           src="/logo_facebook.jpg"
           alt="logo frequencies"
-          width="64"
-          height="64"
         />
-      </a>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    </a>
+    <input id="menu-btn" class="menu-btn" type="checkbox" />
     <label class="menu-icon" for="menu-btn">
       <span class="navicon"></span>
     </label>
