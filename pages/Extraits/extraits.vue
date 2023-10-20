@@ -7,7 +7,7 @@
         </div>
 
         <h2 class="blue_outline">Les Séries Audio</h2>
-        
+
         <iframe title="Lecteur intégré spotify pour écouter l'extrait de 'Les Chroniques Sombres'" style="border-radius:12px" src="https://open.spotify.com/embed/episode/62MGPwuCETyoVTubkQwyl1?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="box--resume">
         <button @click="toggleText(1)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
@@ -31,8 +31,8 @@
         </div>
 
         <h2 class="blue_outline">Les Histoires Courtes</h2>
-        
-        <iframe title="Lecteur intégré spotify pour écouter l'extrait de 'Echo - Histoires Courtes'" style="border-radius:12px" src="https://open.spotify.com/embed/episode/7wjCbzIpdGPuwGCdlNTa86?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+      <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameBorder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/episode/7wjCbzIpdGPuwGCdlNTa86?utm_source=generator&theme=0" style="border-radius:12px" title="Lecteur intégré spotify pour écouter l'extrait de 'Echo - Histoires Courtes'" width="90%"></iframe>
         <div class="box--resume">
         <button @click="toggleText(3)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
         <p v-show="w3" class="text--resume">
@@ -40,8 +40,8 @@
             Il s'agit de la version audio de "Les chèques & Matt" qui a été réalisé durant le 48H Film Project, vous pourrez retrouver la version vidéo sur Youtube à "Echo" ou à "https://www.youtu.be/xYKpDSc67q0"<br>
         </p>
         </div>
-        
-        <iframe title="Lecteur intégré spotify pour écouter l'extrait de 'Les Chèques & Matt - Histoires Courtes'" style="border-radius:12px" src="https://open.spotify.com/embed/episode/03c7GJTCzP6jdLoQ4nghet?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+      <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameBorder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/episode/03c7GJTCzP6jdLoQ4nghet?utm_source=generator&theme=0" style="border-radius:12px" title="Lecteur intégré spotify pour écouter l'extrait de 'Les Chèques & Matt - Histoires Courtes'" width="90%"></iframe>
         <div class="box--resume">
         <button @click="toggleText(4)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
         <p v-show="w4" class="text--resume">
@@ -53,13 +53,8 @@
     </main>
 </template>
 
-<script setup>
-  useHead({
-    title: 'Extraits des Projets Frequencies'
-  })
-</script>
 <script>
-import { defineComponent } from '@vue/composition-api'
+import {defineComponent} from '@vue/composition-api'
 
 export default defineComponent({
     data: () => ({
@@ -79,30 +74,18 @@ export default defineComponent({
         if (wich == 4)
             this.w4 = !this.w4;
     }
+    },
+    setup() {
+
+    },
+    head() {
+        return {
+            title: "Extraits des Projets Frequencies"
+        };
     }
 })
 </script>
 
-<style scoped>
-.instructions_box {
-    width: 100%;
-}
-
-iframe {
-    margin-bottom: 0.5vw;
-}
-
-h2 {
-    margin-top: 3vw;
-    margin-bottom: 2vw;
-}
-
-.button--resume {
-    border: 1px solid #166bba;
-    background-color: #166bba;
-}
-
-.text--resume {
-    border: 1px solid #166bba;
-}
+<style>
+@import './extraits.modules.scss';
 </style>

@@ -1,0 +1,86 @@
+.projects_box {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.project {
+  border-radius: 8px;
+  width: 28%;
+  margin-bottom: 5vw;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 230px;
+  height: 430px;
+}
+
+.project p {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.project .button--blue {
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 1vw;
+}
+
+.project img {
+  width: 100%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  object-fit: contain;
+}
+
+h3 {
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+.project-blue {
+  background-color: #166bba;
+}
+
+.project-black {
+  background-color: black;
+}
+
+.project-red {
+  background-color: #c23636;
+}
+
+.project-blue h3, .project-blue .project-desc {
+  color: #fff;
+}
+
+.project-black h3, .project-black .project-desc {
+  color: #fff;
+}
+
+.project-red h3, .project-red .project-desc {
+  color: #fff;
+}
+
+.project-red .button--blue {
+  background-color: #fff;
+  color: #c23636;
+}
+
+/*button--blue */
+
+@media (max-width: 37.5rem) {
+  .project-desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .project-desc {
+
+  }
+}

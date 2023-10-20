@@ -18,29 +18,24 @@
             Mixage / Mastering : Adrien Halfon<br>
         </div>
         <h2 class="red_outline">Le dernier épisode</h2>
-        
+
         <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <!-- <div class="box--resume">
         <button @click="toggleText(0)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description du dernier épisode publié"></span></button>
         </div> -->
 
         <h2 class="red_outline">Tous les épisodes</h2>
-        
-        <iframe title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" style="border-radius:12px" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" width="90%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+      <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameBorder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/episode/3DE1RjQwxdgrsO4WgLEMiw?utm_source=generator&theme=0" style="border-radius:12px" title="Lecteur intégré spotify pour écouter l'épisode 1 des chroniques sombres" width="90%"></iframe>
         <!-- <div class="box--resume">
         <button @click="toggleText(1)" class="button--resume">Description de l'épisode<span aria-label="montre ou cache la description de l'épisode 1"></span></button>
         </div> -->
-    
+
     </main>
 </template>
 
-<script setup>
-  useHead({
-    title: 'Les Chroniques Sombres'
-  })
-</script>
 <script>
-import { defineComponent } from '@vue/composition-api'
+import {defineComponent} from '@vue/composition-api'
 
 export default defineComponent({
     data: () => ({
@@ -54,31 +49,18 @@ export default defineComponent({
         if (wich == 1)
             this.one = !this.one;
     }
+    },
+    setup() {
+
+    },
+    head() {
+        return {
+            title: "Les Chroniques Sombres"
+        };
     }
 })
 </script>
 
-<style scoped>
-.instructions_box {
-    width: 100%;
-}
-
-iframe {
-    margin-bottom: 0.5vw;
-}
-
-h2 {
-    margin-top: 3vw;
-    margin-bottom: 2vw;
-}
-
-.button--resume {
-    border: 1px solid #c23636;
-    background-color: #c23636;
-}
-
-.text--resume {
-    border: 1px solid #c23636;
-}
-
+<style>
+@import './chroniques.modules.scss';
 </style>

@@ -5,7 +5,7 @@
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
       de tous
     </p>
-    <ul>
+    <ul class="button-box">
       <li>
         <a
           class="button--white"
@@ -15,32 +15,17 @@
         ></a>
       </li>
       <li>
-        <!-- <router-link class="button--white" to="/sponsor">Devenir sponsor</router-link> -->
+        <!-- <NuxtLink class="button--white" to="/sponsor">Devenir sponsor</NuxtLink> -->
         <a class="button--white">Devenir sponsor</a>
       </li>
       <li>
-        <!-- <router-link class="button--white" to="/mecene">Devenir mécène</router-link> -->
+        <!-- <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink> -->
         <a class="button--white">Devenir mécène</a>
       </li>
     </ul>
   </div>
 </template>
 
-<style scoped>
-.intro {
-  color: #fff;
-  background-image: url("/img/image_accueil.png");
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 32%;
-  padding-bottom: 5%;
-  margin-bottom: 4vw;
-}
-
-.h1-title {
-  background-color: #000000;
-}
+<style>
+@import './intro.modules.scss';
 </style>

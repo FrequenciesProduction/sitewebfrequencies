@@ -1,0 +1,19 @@
+.description {
+  width: 100%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.description img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+h2 {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}

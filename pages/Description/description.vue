@@ -44,22 +44,8 @@
   </main>
 </template>
 
-<style scoped>
-.onde {
-  width: 100%;
-  object-fit: contain;
-  margin-bottom: 2vw;
-}
-.description {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  text-align: justify;
-}
-
-.description img {
-  float: left;
-  padding-right: 2vw;
-}
+<style>
+@import './description.modules.scss';
 </style>
 
 <script setup>
@@ -68,7 +54,7 @@
   })
 </script>
 <script>
-import { defineComponent } from "@vue/composition-api";
+import {defineComponent} from "@vue/composition-api";
 
 export default defineComponent({
   

@@ -1,44 +1,16 @@
-<template>
-  <header class="header" role="banner">
-      <NuxtLink to="/" class="logo" aria-label="retour à l'accueil">
-        <img class="img-logo" src="img/logo_facebook.jpg" alt="logo frequencies" width="64" height="64"/>
-      </NuxtLink>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span>
-    </label>
-    <ul class="menu">
-      <li>
-        <router-link class="button--white" to="/projets">Nos projets</router-link>
-      </li>
-      <!-- <li>
-        <router-link class="button--white" to="/emissions">Nos émissions</router-link>
-      </li> -->
-      <li>
-        <router-link class="button--white" to="/projetsv2">Projets V2</router-link>
-      </li>
-      <li>
-        <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>
-      </li>
-      <li>
-        <a class="button--blue" href="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies" target="blank">
-          Faire un don
-          <span aria-label="ouvre un nouvel onglet"></span>
-        </a>
-      </li>
-    </ul>
-  </header>
-</template>
-
-
-<style scoped>
 body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
 }
 
+/* header */
+
 .header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 5px;
   background-image: linear-gradient(#141414 90%, hsla(0, 0%, 8%, 0));
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -76,13 +48,47 @@ body {
 }
 
 .img-logo {
+  width: 64px;
+  height: 64px;
+}
+
+a.button--white {
+  display: inline-block;
+  border-radius: 4px;
+  color: #c23636;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 1vw 2vw;
+  margin: 0.5vw 0.5vw 1vw 0.5vw;
+}
+
+a.button--blue {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #c23636;
+  color: #fff;
+  background-color: #c23636;
+  text-decoration: none;
+  padding: 1vw 2vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  width: 150px;
+  height: 89px;
+}
+
+.button--blue:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 /* menu */
 
 .menu {
-    display: flex;
+  display: flex;
 }
+
 .header .menu {
   clear: both;
   max-height: 0;
@@ -90,13 +96,13 @@ body {
 }
 
 ul.menu > li {
-    display: flex;
+  display: flex;
 }
 
 ul.menu > li > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* menu icon */
@@ -105,7 +111,7 @@ ul.menu > li > a {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 28px 40px;
   position: relative;
   user-select: none;
 }
@@ -189,4 +195,3 @@ ul.menu > li > a {
     font-size: .75rem
   }
 }
-</style>
