@@ -3,7 +3,7 @@
     <Intro/>
     <img src="img/onde_deco.png" alt="">
     <h2 class="section_title">Découvrir les derniers projets de Frequencies</h2>
-    <ProjectsMini></ProjectsMini>
+    <ProjectsMini/>
     <img src="img/onde_deco.png" alt="">
     <Description/>
     <img src="img/onde_deco.png" alt="">
