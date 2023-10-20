@@ -3,7 +3,7 @@
     <a aria-label="retour à l'accueil" class="logo" href="/static">
         <img
           class="img-logo"
-          src="/logo_facebook.jpg"
+          src="img/logo_facebook.jpg"
           alt="logo frequencies"
         />
     </a>
