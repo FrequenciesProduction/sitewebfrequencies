@@ -195,4 +195,12 @@ ul.menu > li > a {
   ul.menu {
     font-size: .75rem
   }
+  a.button--blue {
+    display: none;
+  }
+  .header .menu-icon {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45%;
+  }
 }
