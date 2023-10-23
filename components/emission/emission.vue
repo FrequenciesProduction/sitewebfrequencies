@@ -21,21 +21,24 @@
 </template>
 
 <script>
-    let axios = require('axios');
-    let Parser = require('rss-parser');
-    let parser = new Parser();
-    import {deleteEmissionUrl, emissionsBaseUrl} from '../../firebase';
+    import axios from 'axios'
+    import Parser from 'rss-parser'
+    let parser = new Parser()
+    import {deleteEmissionUrl, emissionsBaseUrl} from '../../firebase'
 
-    export default {
-        created() {
-            const params = this.$route.params
-            this.name = params.emissionTitle
+    export default{
+        setup() {
+            const route = useRoute()
+            const name = route.query.emissionTitle
+
+            return {
+                name,
+                sourceFile: ''
+            }
         },
         data() {
             return {
-                emissionsData: '',
-                name: "",
-                sourceFile: ""
+                emissionsData: ''
             }
         },
         mounted() {
@@ -85,7 +88,6 @@
                 let compositionTitle = "Composition"
                 let mixageTitle = "Mixage"
                 let description
-                console.log(items)
                 items.forEach((itemObject) => {
                     let content = this.parseHtmlEntities(itemObject.content)
                     let indexDesc = content.indexOf("<p>")
@@ -129,7 +131,6 @@
                     }
                     let image = itemObject.itunes.image;
                     let podcastUrl = itemObject.link
-                    console.log(podcastUrl)
                     let podTab = podcastUrl.split("/");
                     itemObject.image = image
                     itemObject.link = headerPodcastLink + podTab[7]

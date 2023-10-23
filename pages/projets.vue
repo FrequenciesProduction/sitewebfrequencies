@@ -10,7 +10,10 @@
                         <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
-                    <router-link class="button--blue" :to="{ name: 'emission', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link>
+                    <button class="button--blue" @click="$router.push(`/emission?emissionTitle=${projet.tabTitle}&tabTitle=${projet.titre}`)">
+                        J'écoute<span aria-label="Réminiscence"></span>
+                    </button>
+                    <!-- <router-link class="button--blue" :to="{ name: 'emission', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link> -->
                 </div>
             </div>
             <img src="img/onde_deco.png" alt="">
@@ -79,7 +82,6 @@ export default defineComponent({
                 const rssProjet = projets[projet].rss
                 this.readRssFile(rssProjet, tabProjetTitle)
             }
-            console.log(this.projetsData)
         },
         readRssFile(rssUrl, title) {
             axios.get(rssUrl).then((res) => {

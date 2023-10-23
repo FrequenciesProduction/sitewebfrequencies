@@ -9,29 +9,31 @@
     </main>
 </template>
 
-<script setup>
-    useHead({
-        title: 'Les Chroniques Sombres'
-    })
-    const route = useRoute()
-    console.log(route)
-</script>
-
 <script>
     import axios from 'axios'
     import Parser from 'rss-parser'
     let parser = new Parser()
     import { storage, emissionsBaseUrl, deleteEmissionUrl } from '../../firebase';
-    import { defineComponent } from '@vue/composition-api'
+    
+    export default {
+        // data() {
+        //     return {
+        //         name: '',
+        //         fichier: '',
+        //         title: ''
+        //     }
+        // },
+        setup() {
+            useHead({
+                title: 'Nos Emissions'
+            })
+            const route = useRoute()
+            const name = route.query.emissionTitle
+            const tabTitle = route.query.tabTitle
 
-    export default defineComponent({
-        created() {
-            const params = this.$route.params
-            this.name = params.emissionTitle
-        },
-        data() {
             return {
-                name: '',
+                name,
+                tabTitle,
                 fichier: '',
                 title: ''
             }
@@ -41,13 +43,12 @@
         },
         methods: {
             async getData() {
-                console.log(this.name)
                 await axios.get(emissionsBaseUrl + '?orderBy="titre"&equalTo="'+this.name+'"').then((response) => {
                     let obj = response.data
-                    console.log(obj)
                     let objKey = Object.keys(obj)[0]
                     let sourceValue = obj[objKey].rss
                     this.fichier = sourceValue
+                    
                 })  
                 axios.get(this.fichier).then((res) => {
                     let feedResults = parser.parseString(res.data)
@@ -55,10 +56,9 @@
                         this.title = feedData.title
                     })
                 })
-
             },
         }
-    })
+    }
 </script>
 
 <style scoped>

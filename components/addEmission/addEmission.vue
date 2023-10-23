@@ -16,8 +16,8 @@ import
     </div>
 </template>
 <script>
-    let axios = require('axios');
-    import {emissionsBaseUrl} from '../../firebase';
+    import axios from 'axios'
+    import {emissionsBaseUrl} from '../../firebase'
 
     export default {
         data() {

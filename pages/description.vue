@@ -1,8 +1,8 @@
 <template>
   <main class="main_box" role="main">
-    <img class="onde" src="img/onde_deco.png" alt="" />
+    <img class="onde" src="/img/onde_deco.png" alt="" />
     <div class="description">
-      <img src="img/qui_sommes_nous_2.png" alt="" />
+      <img src="/img/qui_sommes_nous_2.png" alt="" />
 
       <h1>Qui sommes-nous ?</h1>
 
@@ -40,7 +40,7 @@
         C’est l’origine du projet !
       </p>
     </div>
-    <img class="onde" src="img/onde_deco.png" alt="" />
+    <img class="onde" src="/img/onde_deco.png" alt="" />
   </main>
 </template>
 
