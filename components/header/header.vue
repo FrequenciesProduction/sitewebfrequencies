@@ -14,13 +14,13 @@
       <li>
         <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>
       </li>
-      <li>
-        <a class="button--blue" href="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies" target="blank">
-          Faire un don
-          <span aria-label="ouvre un nouvel onglet"></span>
-        </a>
-      </li>
     </ul>
+    <a class="button--blue"
+       href="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies"
+       target="blank">
+      Faire un don
+      <span aria-label="ouvre un nouvel onglet"></span>
+    </a>
   </header>
 </template>
 
@@ -28,3 +28,5 @@
 <style>
 @import './header.modules.scss';
 </style>
+<script lang="ts" setup>
+</script>
