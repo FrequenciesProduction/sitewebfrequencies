@@ -79,10 +79,18 @@ h3 {
   .project-desc {
     font-size: 0.8rem;
   }
+  .project-desc .button--blue {
+    display: contents;
+  }
+  .projects_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 25rem) {
-  .project-desc {
 
-  }
 }
