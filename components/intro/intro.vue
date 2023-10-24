@@ -7,25 +7,22 @@
     </p>
     <ul class="button-box">
       <li>
-        <a
-          class="button--white"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"
-          target="blank"
-          >Devenir bénévole<span aria-label="ouvre un nouvel onglet"></span
-        ></a>
+        <introButton link="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" texte="Devenir bénévole"/>
       </li>
       <li>
-        <!-- <NuxtLink class="button--white" to="/sponsor">Devenir sponsor</NuxtLink> -->
-        <a class="button--white">Devenir sponsor</a>
+        <introButton link="" texte="Devenir sponsor"/>
       </li>
       <li>
-        <!-- <NuxtLink class="button--white" to="/mecene">Devenir mécène</NuxtLink> -->
-        <a class="button--white">Devenir mécène</a>
+        <introButton link="" texte="Devenir mécène"/>
       </li>
     </ul>
   </div>
 </template>
 
 <style>
-@import './intro.modules.scss';
+  @import './intro.modules.scss';
 </style>
+
+<script setup>
+  import introButton from '~/components/buttons/introButton.vue'
+</script>

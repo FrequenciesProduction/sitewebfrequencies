@@ -2,7 +2,8 @@
     <main class="main_box" role="main">
         <div class="projects_page">
             <h1>Nos projets</h1>
-            <img src="img/onde_deco.png" alt="">
+            <img src="/img/onde_deco.png" alt="">
+            
             <div class="projects_box">
                 <div class="project" v-for="projet in projetsData">
                     <img :src="projet.image">
@@ -10,16 +11,14 @@
                         <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
-                    <button class="button--blue" @click="$router.push(`/emission?emissionTitle=${projet.tabTitle}&tabTitle=${projet.titre}`)">
-                        J'écoute<span aria-label="Réminiscence"></span>
-                    </button>
+                    <emission-button texte="J'écoute" :label="projet.titre" @click="$router.push(`/emission?emissionTitle=${projet.tabTitle}&tabTitle=${projet.titre}`)"/>
                     <!-- <router-link class="button--blue" :to="{ name: 'emission', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link> -->
                 </div>
             </div>
-            <img src="img/onde_deco.png" alt="">
+            <img src="/img/onde_deco.png" alt="">
             <div class="projects_box">
                 <div class="project">
-                    <img src="img/logo_facebook.jpg">
+                    <img src="/img/logo_facebook.jpg">
                     <div>
                         <h2 class="blue_outline">Frequencies</h2>
                         <p>
@@ -29,7 +28,7 @@
                     <router-link class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
                 </div>
                 <div class="project">
-                    <img src="img/logo_facebook.jpg">
+                    <img src="/img/logo_facebook.jpg">
                     <div>
                         <h2 class="red_outline">Courts Métrages</h2>
                         <p>
@@ -40,24 +39,32 @@
                 </div>
 
             </div>
-            <img class="img-bottom" src="img/onde_deco.png" alt="">
+            <img class="img-bottom" src="/img/onde_deco.png" alt="">
         </div>
     </main>
 </template>
 
 <script setup>
-  useHead({
-    title: 'Nos Projets'
-  })
+    import emissionButton from '~/components/buttons/emissionButton.vue'
+    useHead({
+        title: 'Nos Projets'
+    })
 </script>
 <script>
-import { defineComponent } from '@vue/composition-api'
 import axios from 'axios'
 import Parser from 'rss-parser'
 let parser = new Parser()
-import { emissionsBaseUrl } from '../firebase';
+import { emissionsBaseUrl } from '../firebase'
 
-export default defineComponent({
+
+export default {
+    setup() {
+        const router = useRouter()
+
+        return {
+            router: router,
+        }
+    },
     data() {
         return {
             projetsData: '',
@@ -95,7 +102,7 @@ export default defineComponent({
             })
         }
     }
-})
+}
 </script>
 
 <style scoped>

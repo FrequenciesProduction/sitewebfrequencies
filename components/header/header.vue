@@ -1,7 +1,7 @@
 <template>
   <header class="header" role="banner">
     <NuxtLink aria-label="retour à l'accueil" class="logo" to="/">
-        <img class="img-logo" src="img/logo_facebook.jpg" alt="logo frequencies"/>
+        <img class="img-logo" src="/img/logo_facebook.jpg" alt="logo frequencies"/>
     </NuxtLink>
     <input id="menu-btn" class="menu-btn" type="checkbox" />
     <label class="menu-icon" for="menu-btn">
@@ -26,7 +26,8 @@
 
 
 <style>
-@import './header.modules.scss';
+  @import './header.modules.scss';
 </style>
-<script lang="ts" setup>
+<script setup>
+
 </script>

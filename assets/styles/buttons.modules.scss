@@ -1,0 +1,22 @@
+a.button--blue,
+button.button--blue {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #c23636;
+    color: #fff;
+    background-color: #c23636;
+    text-decoration: none;
+    text-align: center;
+    padding: 1vw 2vw;
+    margin: auto;
+    margin-right: 1vw;
+    width: 150px;
+    max-height: 70px;
+}
+
+a.button--blue,
+button.button--blue:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #9c2c2c;
+}

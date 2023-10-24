@@ -28,8 +28,8 @@
 
     export default{
         setup() {
-            const route = useRoute()
-            const name = route.query.emissionTitle
+            const routes = useRoute()
+            const name = routes.query.emissionTitle
 
             return {
                 name,
