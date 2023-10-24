@@ -11,6 +11,6 @@
   })
 </script>
 
-<style>
+<style scoped>
   @import '/assets/styles/sponsor.modules.scss';
 </style>

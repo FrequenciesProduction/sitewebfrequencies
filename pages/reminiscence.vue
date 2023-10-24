@@ -223,6 +223,6 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
   @import '/assets/styles/reminiscence.modules.scss';
 </style>

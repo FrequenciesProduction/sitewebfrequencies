@@ -84,6 +84,6 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
   @import '/assets/styles/extraits.modules.scss';
 </style>

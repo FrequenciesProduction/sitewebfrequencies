@@ -1,8 +1,7 @@
 .projects_box {
+  display: flex;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .project {
@@ -43,14 +42,17 @@ h3 {
 }
 
 .project-blue {
+  margin-right: 2vw;
   background-color: #166bba;
 }
 
 .project-black {
+  margin-right: 2vw;
   background-color: black;
 }
 
 .project-red {
+  margin-right: 2vw;
   background-color: #c23636;
 }
 

@@ -21,6 +21,6 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
   @import '/assets/styles/videos.modules.scss';
 </style>

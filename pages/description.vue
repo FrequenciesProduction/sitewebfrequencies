@@ -44,7 +44,7 @@
   </main>
 </template>
 
-<style>
+<style scoped>
   @import '/assets/styles/description.modules.scss';
 </style>
 

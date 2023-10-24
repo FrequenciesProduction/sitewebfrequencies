@@ -59,6 +59,6 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
     @import '/assets/styles/chroniques.modules.scss';
 </style>
