@@ -1,13 +1,12 @@
 <template>
-    <a href="{{ link }}" class="button--white" target="_blank">
+    <a class="button--white" target="_blank">
         {{ texte }}
-        <span aria-label="Ouvre un nouvel onglet"></span>
     </a>
 </template>
 
 <script>
     export default {
-        props: ['texte', 'link']
+        props: ['texte']
     }
 </script>
 
