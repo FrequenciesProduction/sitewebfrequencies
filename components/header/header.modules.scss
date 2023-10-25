@@ -53,26 +53,24 @@ body {
 
 a.button--white {
   display: inline-block;
+  max-height: 70px;
   border-radius: 4px;
   color: #c23636;
   background-color: #fff;
   text-decoration: none;
   margin: 1vw 0.5vw 1.5vw 1vw;
   padding: 1vw;
-  max-height: 70px;
 }
 
 a.button--blue, button.button--blue {
   display: inline-block;
+  max-height: 70px;
   border-radius: 4px;
-  border: 1px solid #c23636;
   color: #fff;
   background-color: #c23636;
   text-decoration: none;
-  padding: 1vw 2vw;
-  margin: 0.5vw;
-  width: 150px;
-  max-height: 70px;
+  margin: 1vw 0.5vw 1.5vw 1vw;
+  padding: 1vw;
 }
 
 .button--blue:hover {

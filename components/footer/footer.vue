@@ -43,6 +43,6 @@
     </footer>
 </template>
 
-<style>
+<style scoped>
 @import './footer.modules.scss';
 </style>
