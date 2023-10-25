@@ -1,13 +1,13 @@
 <template>
     <button class='button--blue'>
         {{ texte }} 
-        <span aria-label="{{ label }}"></span>
+        <span aria-label="{{ labelEmission }}"></span>
     </button>
 </template>
 
 <script>
     export default {
-        props: ['texte','label']
+        props: ['texte','labelEmission']
     }
 </script>
 

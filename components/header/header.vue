@@ -1,5 +1,5 @@
 <template>
-  <header class="header" role="banner">
+  <header id="header" class="header" role="banner">
     <NuxtLink aria-label="retour à l'accueil" class="logo" to="/">
         <img class="img-logo" src="/img/logo_facebook.jpg" alt="logo frequencies"/>
     </NuxtLink>
@@ -28,6 +28,6 @@
 <style>
   @import './header.modules.scss';
 </style>
-<script setup>
-
+<script>
+  
 </script>

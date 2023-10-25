@@ -11,7 +11,7 @@
                         <h2 :class="projet.cssClass">{{ projet.titre }}</h2>
                         <p>{{ projet.description }}</p>
                     </div>
-                    <emission-button texte="J'écoute" :label="projet.titre" @click="$router.push(`/emission?emissionTitle=${projet.tabTitle}&tabTitle=${projet.titre}`)"/>
+                    <emission-button texte="J'écoute" :labelEmission="projet.titre" @click="$router.push(`/emission?emissionTitle=${projet.tabTitle}&tabTitle=${projet.titre}`)"/>
                     <!-- <router-link class="button--blue" :to="{ name: 'emission', params: { emissionTitle: projet.tabTitle }}">J'écoute<span aria-label="Réminiscence"></span></router-link> -->
                 </div>
             </div>
