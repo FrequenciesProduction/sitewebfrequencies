@@ -5,3 +5,8 @@
 .custom-file-input:lang(fr-FR) ~ .custom-file-label::after {
   content: 'Parcourir';
 }
+
+.btn-group-form {
+  display: flex;
+  justify-content: space-evenly;
+}
