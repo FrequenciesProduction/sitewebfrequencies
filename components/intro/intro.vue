@@ -24,5 +24,5 @@
 </style>
 
 <script setup>
-  import introButton from '~/components/buttons/introButton.vue'
+import introButton from '~/components/buttons/introButton.vue'
 </script>

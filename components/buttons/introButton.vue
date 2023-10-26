@@ -1,6 +1,7 @@
 <template>
     <a class="button--white" :href="lien" target="_blank">
         {{ texte }}
+    <span aria-label="Ouvre un nouvel onglet"></span>
     </a>
 </template>
 
@@ -18,5 +19,5 @@
 </script>
 
 <style scoped>
-    @import '/assets/styles/buttons.modules.scss';
+@import 'assets/styles/buttons.modules.scss';
 </style>
