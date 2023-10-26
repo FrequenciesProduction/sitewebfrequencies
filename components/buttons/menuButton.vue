@@ -11,5 +11,5 @@
 </script>
 
 <style scoped>
-    @import '/assets/styles/buttons.modules.scss';
+@import 'assets/styles/buttons.modules.scss';
 </style>

@@ -45,8 +45,9 @@
 </template>
 
 <script setup>
-    import emissionButton from '~/components/buttons/emissionButton.vue'
-    useHead({
+import emissionButton from '~/components/buttons/emissionButton.vue'
+
+useHead({
         title: 'Nos Projets'
     })
 </script>
@@ -106,5 +107,5 @@ export default {
 </script>
 
 <style scoped>
-    @import '/assets/styles/projets.modules.scss';
+@import 'assets/styles/projets.modules.scss';
 </style>
