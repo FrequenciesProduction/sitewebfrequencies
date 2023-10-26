@@ -1,7 +1,7 @@
 <template>
-    <a class="button--white" :href="lien" target="_blank">
+    <a :class="btnClass" :href="lien" target="_blank">
         {{ texte }}
-    <span aria-label="Ouvre un nouvel onglet"></span>
+    <span :aria-label="label"></span>
     </a>
 </template>
 
@@ -12,6 +12,12 @@
                 type: String
             },
             texte: {
+                type: String
+            },
+            label: {
+                type: String
+            },
+            btnClass: {
                 type: String
             }
         }

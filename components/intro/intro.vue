@@ -7,13 +7,13 @@
     </p>
     <ul class="button-box">
       <li>
-        <introButton texte="Devenir bénévole" lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"/>
+        <introButton btnClass="button--white" texte="Devenir bénévole" label="Ouvre dans un nouvel onglet" lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"/>
       </li>
       <li>
-        <introButton texte="Devenir sponsor"/>
+        <introButton btnClass="button--white" texte="Devenir sponsor"/>
       </li>
       <li>
-        <introButton texte="Devenir mécène"/>
+        <introButton btnClass="button--white" texte="Devenir mécène"/>
       </li>
     </ul>
   </div>

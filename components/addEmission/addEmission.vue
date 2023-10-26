@@ -2,14 +2,22 @@
     <div>
         <h2>Ajouter une emission</h2>
         <form @submit.prevent="onAddEmission">
-            <b-form-group id="input-group-titre" label="Titre:" label-for="titre-emission">
-                <b-form-input id="titre-emission" v-model="emission.titre" placeholder="Nom de l'émission" required></b-form-input>
-            </b-form-group>
-            <b-form-group id="input-group-rss" label="Lien:" label-for="rss-emission">
-                <b-form-input id="rss-emission" v-model="emission.rss" placeholder="Lien du fichier RSS" required></b-form-input>
-            </b-form-group>
-            <b-button onClick="window.location.href='/emissions'">Retour</b-button>
-            <b-button type="submit" variant="success">Ajouter</b-button>
+            <div class="mb-3">
+                <label for="titre-emission" class="form-label">Titre:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="titre-emission" v-model="emission.titre" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="rss-emission" class="form-label">Lien:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="rss-emission" v-model="emission.rss" required>
+                </div>
+            </div>
+            <div class="col-12 btn-group-form">
+                <button class="btn btn-md btn-primary" onClick="window.location.href='/emissions'">Retour</button>
+                <button type="submit" class="btn btn-md btn-success">Ajouter</button>
+            </div>
         </form>
     </div>
 </template>

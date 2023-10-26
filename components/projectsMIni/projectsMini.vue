@@ -6,7 +6,7 @@
             <p class="project-desc">
             Présentations et extraits des différents projets Frequencies.
             </p>
-            <NuxtLink class="button--blue" to="/extraits">J'écoute<span aria-label="Vidéos Youtube de Frequencies"></span></NuxtLink>
+            <introButton btnClass="button--blue" texte="J'écoute" lien="/extraits" label="Vidéos Youtube de Frequencies"/>
         </div>
 
         <div class="project project-black">
@@ -16,7 +16,7 @@
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
                 Ferez-vous partie de ceux qui écouteront son histoire ?
             </p>
-            <NuxtLink class="button--blue" to="/reminiscence">J'écoute<span aria-label="Réminiscence"></span></NuxtLink>
+            <introButton btnClass="button--blue" texte="J'écoute" lien="/reminiscence" label="Réminiscence"/>
         </div>
 
         <div class="project project-red">
@@ -25,12 +25,15 @@
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
             </p>
-            <NuxtLink style="position: relative;" class="button--blue" to="/chroniques" >J'écoute<span aria-label="Les Chroniques Sombres"></span></NuxtLink>
+            <introButton btnClass="button--white" texte="J'écoute" lien="/chroniques" label="Les Chroniques Sombres"/>
         </div>
 
     </div>
 </template>
 
+<script setup>
+    import introButton from '~/components/buttons/introButton.vue'
+</script>
 <style scoped>
 @import './projectsMini.modules.scss';
 </style>
