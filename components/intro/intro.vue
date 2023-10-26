@@ -7,10 +7,7 @@
     </p>
     <ul class="button-box">
       <li>
-        <a class="button--white" href="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform">
-          Devenir bénévole
-          <span aria-label="Ouvre un nouvel onglet"></span>
-        </a>
+        <introButton texte="Devenir bénévole" lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"/>
       </li>
       <li>
         <introButton texte="Devenir sponsor"/>

@@ -13,4 +13,7 @@ export default defineNuxtConfig({
       charset: 'utf-8'
     }
   },
+  css: [
+    'bootstrap/dist/css/bootstrap.css'
+  ]
 })

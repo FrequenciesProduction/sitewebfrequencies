@@ -1,5 +1,3 @@
-import
-
 <template>
     <div>
         <h2>Ajouter une emission</h2>
