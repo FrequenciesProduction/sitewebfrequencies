@@ -1,12 +1,25 @@
 <template>
-    <a href="{{ link }}" class="button--white">
+  <a class="menu--button" href="{{ lien }}" target="_blank">
         {{ texte }}
     </a>
 </template>
 
 <script>
     export default {
-        props: ['texte', 'link']
+      props: {
+        lien: {
+          type: String
+        },
+        texte: {
+          type: String
+        },
+        label: {
+          type: String
+        },
+        btnClass: {
+          type: String
+        }
+      }
     }
 </script>
 

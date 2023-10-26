@@ -9,18 +9,24 @@
     </label>
     <ul class="menu">
       <li>
-        <router-link class="button--white" to="/projets">Nos projets</router-link>
+        <menuButton
+            btnClass="menu--button"
+            lien="/projets"
+            texte="Nos projets" />
+        <!-- <router-link class="menu-button" to="/projets">Nos projets</router-link>-->
       </li>
       <li>
-        <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>
+        <menuButton
+            btnClass="menu--button"
+            lien="/description"
+            texte="Qui sommes nous?" />
+        <!-- <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>-->
       </li>
     </ul>
-    <a class="button--blue"
-       href="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies"
-       target="blank">
-      Faire un don
-      <span aria-label="ouvre un nouvel onglet"></span>
-    </a>
+    <donatedButton
+        btnClass="donated--button"
+        texte="Faire un don"
+        @click="'https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies'" />
   </header>
 </template>
 
@@ -29,5 +35,12 @@
   @import './header.modules.scss';
 </style>
 <script>
-  
+
+import {defineComponent} from "vue";
+import MenuButton from "~/components/buttons/menuButton.vue";
+import DonatedButton from "~/components/buttons/donatedButton.vue";
+
+export default defineComponent({
+  components: {DonatedButton, MenuButton}
+})
 </script>
