@@ -7,10 +7,12 @@
     </p>
     <ul class="button-box">
       <li>
-        <a class="button--white" href="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform">
+        <introButton :lien="'https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform'"
+                     texte="Devenir sponsor" />
+        <!-- <a class="button--white" href="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform">
           Devenir bénévole
           <span aria-label="Ouvre un nouvel onglet"></span>
-        </a>
+        </a>-->
       </li>
       <li>
         <introButton texte="Devenir sponsor"/>
@@ -27,5 +29,5 @@
 </style>
 
 <script setup>
-  import introButton from '~/components/buttons/introButton.vue'
+import introButton from '~/components/buttons/introButton.vue'
 </script>

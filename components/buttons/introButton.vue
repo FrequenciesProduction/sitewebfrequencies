@@ -1,15 +1,16 @@
 <template>
-    <a class="button--white" target="_blank">
+  <a class="button--white" href="{{ lien }}" target="_blank">
         {{ texte }}
+    <span aria-label="Ouvre un nouvel onglet"></span>
     </a>
 </template>
 
 <script>
     export default {
-        props: ['texte']
+      props: ['texte', 'lien']
     }
 </script>
 
 <style scoped>
-    @import '/assets/styles/buttons.modules.scss';
+@import 'assets/styles/buttons.modules.scss';
 </style>
