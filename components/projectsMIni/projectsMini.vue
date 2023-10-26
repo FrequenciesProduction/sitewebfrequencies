@@ -6,7 +6,8 @@
             <p class="project-desc">
             Présentations et extraits des différents projets Frequencies.
             </p>
-            <introButton btnClass="button--blue" texte="J'écoute" lien="/extraits" label="Vidéos Youtube de Frequencies"/>
+          <emissionButton btnClass="emission--button" label="Vidéos Youtube de Frequencies" lien="/extraits"
+                          texte="J'écoute" />
         </div>
 
         <div class="project project-black">
@@ -16,7 +17,7 @@
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
                 Ferez-vous partie de ceux qui écouteront son histoire ?
             </p>
-            <introButton btnClass="button--blue" texte="J'écoute" lien="/reminiscence" label="Réminiscence"/>
+          <emissionButton btnClass="emission--button" label="Réminiscence" lien="/reminiscence" texte="J'écoute" />
         </div>
 
         <div class="project project-red">
@@ -25,14 +26,15 @@
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
             </p>
-            <introButton btnClass="button--white" texte="J'écoute" lien="/chroniques" label="Les Chroniques Sombres"/>
+          <emissionButton btnClass="emission--button" label="Les Chroniques Sombres" lien="/chroniques"
+                          texte="J'écoute" />
         </div>
 
     </div>
 </template>
 
 <script setup>
-    import introButton from '~/components/buttons/introButton.vue'
+import EmissionButton from "~/components/buttons/emissionButton.vue";
 </script>
 <style scoped>
 @import './projectsMini.modules.scss';

@@ -1,5 +1,5 @@
 <template>
-    <button class='button--blue'>
+  <button class='emission--button'>
         {{ texte }} 
         <span aria-label="{{ labelEmission }}"></span>
     </button>
@@ -7,7 +7,21 @@
 
 <script>
     export default {
-        props: ['texte','labelEmission']
+      props: {
+        lien: {
+          type: String
+        },
+        texte: {
+          type: String
+        },
+        label: {
+          type: String
+        },
+        btnClass: {
+          type: String
+        }
+      }
+      //props: ['texte','labelEmission']
     }
 </script>
 
