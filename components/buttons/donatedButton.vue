@@ -21,7 +21,6 @@ export default {
       type: String
     }
   }
-  //props: ['texte', 'link']
 }
 </script>
 
