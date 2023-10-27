@@ -1,75 +1,65 @@
-# Nuxt 3 Minimal Starter
+## Installation Projet Frequencies
+Tout d'abord, il faut récupérer le projet sur le repo github en clonant depuis cette adresse : 
+[Repo GitHub Frequencies](https://github.com/FrequenciesProduction/sitewebfrequencies)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Ensuite, il faut installer les dépendances avec la commande suivante : 
 
-## Setup
+    yarn install
 
-Make sure to install the dependencies:
+Une fois les dépendances installées, vous pouvez lancer le serveur avec la commande suivante : 
 
-```bash
-# npm
-npm install
+    yarn dev
 
-# pnpm
-pnpm install
+Celle-ci va lancer un serveur en local (par defaut, l'adresse est la suivante (elle sera également indiquée dans la console du serveur) : 
 
-# yarn
-yarn install
+    http://localhost:3000
 
-# bun
-bun install
-```
+## Dossiers de structuration du projet
+Ce projet à été migré depuis les version 2  de Nuxt et de Vuejs vers leur versions 3 respectives.
+Il existe donc des dossiers avec chacun son périmètre : 
 
-## Development Server
+**.firebase**: Configuration et cache de firebase
 
-Start the development server on `http://localhost:3000`:
+**.nuxt**: Dossier créé suite au lancement du serveur local
 
-```bash
-# npm
-npm run dev
+**.output**: Dossier "public" qui sera déployé en ligne
 
-# pnpm
-pnpm run dev
+**assets**: Ce dossier contient les différents styles des pages du site
 
-# yarn
-yarn dev
+**components**: Ce dossier contient tous les composants créés et utilisés dans le site, ainsi que leur style associés
 
-# bun
-bun run dev
-```
+**dist**: Ce dossier va etre généré suite à la génération du serveur pour l'environnement de production
 
-## Production
+** layouts**: CE dossier contient le style appliqué par défaut sur tout le site, il contien également la page d'accueil
 
-Build the application for production:
+** node_modules**: Contient toutes les dépendances du projet. Il est géré automatiquement par yarn
 
-```bash
-# npm
-npm run build
+**pages**: Ce dossier contient les pages affichées lorsque l'on navigue sur le site. Chaque nom de fichier dans ce dossier correspond à une route
 
-# pnpm
-pnpm run build
+**public**: Contient toutes les images qui sont utilisées sur le site
 
-# yarn
-yarn build
+** server**: Contient la configuration du serveur
+## Fichiers racines
+Les fichiers à la racines de ce projet ne doivent pas être modifiés à la main, il sont modifiés automatiquement lors de l'ajout/suppression de dépendances.
 
-# bun
-bun run build
-```
+Seules exceptions : 
 
-Locally preview production build:
+**firebase.js**: Fonctions utilisées de firebase
+**firebase.json**: Paramétrage de firebase
+** nuxt.config.js**: Paramétrage global de l'application
 
-```bash
-# npm
-npm run preview
+## Déploiement Firebase
+Avant de déployer sur firebase, s'assurer que le site fonctionne avec l'émulateur de firebase: 
 
-# pnpm
-pnpm run preview
+ 1. Se placer dans le repertoire du projet avec un invite de commandes
+ 2. Executer ``yarn preprod``
+ 3. Executer ``yarn prod``
+ 4. Executer ``firebase emulators:start``
 
-# yarn
-yarn preview
+Pour déployer sur firebase, il faut suivre les étapes suivantes : 
 
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+ 1. Se placer dans le repertoire du projet avec un invite de commandes
+ 2. Executer ``yarn preprod``
+ 3. Executer ``yarn prod``
+ 4. Executer ``firebase login --reath (Se connecter avec Developper@frequencies.fr)``
+ 5. Executer ``firebase deploy``

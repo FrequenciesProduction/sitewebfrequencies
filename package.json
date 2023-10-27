@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "nuxt prepare",
-    "firebase": "nuxt generate && nuxt build && firebase deploy"
+    "preprod": "nuxt generate && nuxt build",
+    "prod": "npx nuxi generate"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
