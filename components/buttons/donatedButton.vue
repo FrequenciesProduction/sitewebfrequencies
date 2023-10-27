@@ -1,7 +1,6 @@
 <template>
-  <a class="donated--button" :href="lien" target="blank">
+  <a class="donated--button" :aria-label="label" :href="lien" target="_blank">
     {{ texte }}
-    <span aria-label="ouvre un nouvel onglet"></span>
   </a>
 </template>
 
@@ -25,5 +24,5 @@ export default {
 </script>
 
 <style scoped>
-@import 'assets/styles/buttons.modules.scss';
+  @import 'assets/styles/buttons.modules.scss';
 </style>

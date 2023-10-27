@@ -26,7 +26,9 @@
     <donatedButton
         btnClass="donated--button"
         texte="Faire un don"
-        @click="'https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies'" />
+        lien="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies"
+        label="Ouvre un nouvel onglet"
+        />
   </header>
 </template>
 
