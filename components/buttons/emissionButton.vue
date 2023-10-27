@@ -1,7 +1,7 @@
 <template>
   <button class='emission--button'>
         {{ texte }} 
-        <span aria-label="{{ labelEmission }}"></span>
+        <span :aria-label="label"></span>
     </button>
 </template>
 
@@ -21,7 +21,6 @@
           type: String
         }
       }
-      //props: ['texte','labelEmission']
     }
 </script>
 
