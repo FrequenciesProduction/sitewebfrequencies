@@ -1,5 +1,5 @@
 <template>
-  <a class="intro--button" href="{{ lien }}" target="_blank">
+  <a class="intro--button" :href="lien" target="_blank">
         {{ texte }}
     <span aria-label="Ouvre un nouvel onglet"></span>
     </a>

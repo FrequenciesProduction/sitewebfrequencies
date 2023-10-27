@@ -1,5 +1,5 @@
 <template>
-  <a class="menu--button" href="{{ lien }}" target="_blank">
+  <a class="menu--button" :href="lien">
         {{ texte }}
     </a>
 </template>
@@ -24,5 +24,5 @@
 </script>
 
 <style scoped>
-@import 'assets/styles/buttons.modules.scss';
+  @import 'assets/styles/buttons.modules.scss';
 </style>

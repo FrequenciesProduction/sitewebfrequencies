@@ -136,7 +136,7 @@
                     itemObject.link = headerPodcastLink + podTab[7]
                     this.emissionsData.push({itemObject})
                 })
-
+                console.log(this.emissionsData)
             },
             parseHtmlEntities(str) {
                 return str.replace(/&#([0-9]{1,3});/gi, function(match, numStr) {
