@@ -7,7 +7,7 @@
 
 .project {
   border-radius: 8px;
-  width: 33%;
+  width: 30%;
   margin-bottom: 5vw;
   overflow: hidden;
   display: flex;
@@ -75,6 +75,10 @@ h3 {
 /*button--blue */
 
 @media (max-width: 37.5rem) {
+
+  .project {
+    width: 75%;
+  }
   .project-desc {
     font-size: 0.8rem;
   }
