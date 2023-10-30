@@ -55,7 +55,7 @@ useHead({
 import axios from 'axios'
 import Parser from 'rss-parser'
 let parser = new Parser()
-import { emissionsBaseUrl } from '../firebase'
+import {emissionsBaseUrl} from '~/firebase'
 
 
 export default {

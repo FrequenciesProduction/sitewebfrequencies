@@ -1,3 +1,80 @@
-.building {
-  background-color: black;
+.container__head {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30%;
 }
+
+.container {
+
+}
+
+.container--intro {
+
+}
+
+.container__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.container__content--card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 30%;
+}
+
+.container__content--card2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 35%;
+}
+
+.container__content--card3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 35%;
+}
+
+@media (max-width: 37.5rem) {
+
+  .container__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container__content--card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    height: 30%;
+  }
+
+  .container__content--card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    height: 30%;
+  }
+
+  .container__content--card3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    height: 30%;
+  }
+}
+
