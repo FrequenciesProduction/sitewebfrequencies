@@ -6,11 +6,13 @@
 }
 
 .container {
-
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .container--intro {
-
+  text-align: left;
 }
 
 .container__content {
@@ -19,26 +21,33 @@
   justify-content: space-evenly;
 }
 
-.container__content--card1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 25%;
-  height: 30%;
-}
-
-.container__content--card2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 25%;
-  height: 35%;
-}
-
+.container__content--card1,
+.container__content--card2,
 .container__content--card3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: left;
+  width: 35%;
+  height: 30%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+
+.container__contribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container__contribution--construction,
+.container__contribution--community,
+.container__contribution--communication {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   width: 25%;
   height: 35%;
 }
@@ -50,25 +59,27 @@
     flex-direction: column;
   }
 
-  .container__content--card1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    width: 80%;
-    height: 30%;
-  }
-
-  .container__content--card2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    width: 80%;
-    height: 30%;
-  }
-
+  .container__content--card1,
+  .container__content--card2,
   .container__content--card3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 20px 20px;
+    width: 80%;
+    height: 30%;
+    border-radius: 10px;
+  }
+
+  .container__contribution {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container__contribution--construction,
+  .container__contribution--community,
+  .container__contribution--communication {
     display: flex;
     flex-direction: column;
     justify-content: center;
