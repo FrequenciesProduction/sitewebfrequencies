@@ -5,12 +5,20 @@
 }
 
 .description {
-  margin-left: 4vw;
-  margin-right: 4vw;
-  text-align: justify;
+  display: flex;
+  justify-content: center;
+  margin: 4vw;
+  padding: 0 4vw;
 }
 
 .description img {
-  float: left;
-  padding-right: 2vw;
+  margin: auto;
+  width: 80%;
+}
+
+.container__description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 5vw;
 }
