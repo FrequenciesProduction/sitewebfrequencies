@@ -4,6 +4,8 @@
 
   width: 100%;
   padding-top: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
 
   background-image: linear-gradient(to top, rgba(20, 20, 20, 1) 90%, rgba(20, 20, 20, 0));
   background-position: start start;
@@ -23,4 +25,22 @@ img {
   margin: 1vw;
   background-color: #fff;
   padding: 0.5vw;
+}
+
+@media (max-width: 37.5rem) {
+  .footer_box {
+    padding-top: 4vw;
+    padding-right: 4vw;
+    font-size: smaller;
+  }
+  img {
+    border-radius: 8px;
+    border: 1px solid #c23636;
+    overflow: hidden;
+    width: clamp(20px, 2vw, 150px);
+    height: clamp(20px, 2vw, 150px);
+    margin: 1vw;
+    background-color: #fff;
+    padding: 0.5vw;
+  }
 }

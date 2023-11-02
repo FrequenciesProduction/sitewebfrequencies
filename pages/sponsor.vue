@@ -1,7 +1,7 @@
 <template>
     <main class="main_box" role="main">
       <div class="container__head">
-        <img alt="image accueil" src="../public/img/image_accueil.png">
+        <img alt="image accueil" src="../public/img/qui_sommes_nous_1.png">
         <h1>Devenir Sponsor Frequencies</h1>
       </div>
 
