@@ -13,13 +13,13 @@
             lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"
             texte="Devenir bénévole" />
       </li>
-      <li>
+      <!-- <li>
         <introButton
             btnClass="button--white"
             label="Ouvre un nouvel onglet"
             lien="/sponsor"
             texte="Devenir sponsor" />
-      </li>
+      </li>-->
       <li>
         <introButton
             btnClass="button--white"

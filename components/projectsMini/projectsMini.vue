@@ -37,5 +37,5 @@
 import EmissionButton from "~/components/buttons/emissionButton.vue";
 </script>
 <style scoped>
-@import './projectsMini.modules.scss';
+@import 'projectsMini.modules.scss';
 </style>

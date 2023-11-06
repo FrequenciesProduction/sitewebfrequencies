@@ -10,12 +10,13 @@
 </template>
 
 <script>
-    import axios from 'axios'
-    import Parser from 'rss-parser'
-    let parser = new Parser()
-    import { storage, emissionsBaseUrl, deleteEmissionUrl } from '../../firebase';
-    
-    export default {
+import axios from 'axios'
+import Parser from 'rss-parser'
+import {emissionsBaseUrl} from '../firebase';
+
+let parser = new Parser()
+
+export default {
         // data() {
         //     return {
         //         name: '',
