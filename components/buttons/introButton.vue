@@ -1,7 +1,7 @@
 <template>
   <a class="intro--button" :href="lien" target="_blank">
         {{ texte }}
-    <span aria-label="Ouvre un nouvel onglet"></span>
+    <span :aria-label="label"></span>
     </a>
 </template>
 

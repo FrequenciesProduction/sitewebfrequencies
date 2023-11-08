@@ -8,21 +8,24 @@
     <ul class="button-box">
       <li>
         <introButton
-            btnClass="button--white"
-            label="Ouvre dans un nouvel onglet"
+            btnClass="intro--button"
+            label="Aller à la page devenir bénévole"
             lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"
             texte="Devenir bénévole" />
       </li>
+
       <!-- <li>
         <introButton
-            btnClass="button--white"
-            label="Ouvre un nouvel onglet"
+            btnClass="intro--button"
+            label="Aller à la page devenir sponsor"
             lien="/sponsor"
             texte="Devenir sponsor" />
       </li>-->
       <li>
         <introButton
-            btnClass="button--white"
+            btnClass="intro--button"
+            label="Aller à la page devenir mécène"
+            lien="/mécène"
             texte="Devenir mécène" />
       </li>
     </ul>

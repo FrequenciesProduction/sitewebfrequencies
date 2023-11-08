@@ -6,7 +6,8 @@
             <p class="project-desc">
             Présentations et extraits des différents projets Frequencies.
             </p>
-          <emissionButton btnClass="emission--button" label="Vidéos Youtube de Frequencies" lien="/extraits"
+          <emissionButton btnClass="emission--button" label="Vidéos Youtube expliquant la raison d'etre de Frequencies"
+                          lien="/extraits"
                           texte="J'écoute" />
         </div>
 
@@ -17,7 +18,8 @@
                 Installez-vous confortablement, et laissez-vous emporter dans ce récit intemporel.
                 Ferez-vous partie de ceux qui écouteront son histoire ?
             </p>
-          <emissionButton btnClass="emission--button" label="Réminiscence" lien="/reminiscence" texte="J'écoute" />
+          <emissionButton btnClass="emission--button" label="Emission  intitulée Réminiscence" lien="/reminiscence"
+                          texte="J'écoute" />
         </div>
 
         <div class="project project-red">
@@ -26,7 +28,8 @@
                 Dans un univers où les légendes urbaines ne sont plus réduites au rang de folklore, venez suivre l’aventure d’un archiviste en quête de réponse…
                 Et n’oubliez pas peu importe que vous y croyez ou non, cela ne cessera pas d’exister pour autant…
             </p>
-          <emissionButton btnClass="emission--button" label="Les Chroniques Sombres" lien="/chroniques"
+          <emissionButton btnClass="emission--button" label="Emission intitulée Les Chroniques Sombres"
+                          lien="/chroniques"
                           texte="J'écoute" />
         </div>
 

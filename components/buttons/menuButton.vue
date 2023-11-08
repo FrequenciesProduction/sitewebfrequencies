@@ -1,6 +1,7 @@
 <template>
   <a class="menu--button" :href="lien">
         {{ texte }}
+    <span :aria-label="label"></span>
     </a>
 </template>
 

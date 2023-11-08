@@ -12,6 +12,7 @@
         <menuButton
             btnClass="menu--button"
             lien="/projets"
+            label="Nos projets"
             texte="Nos projets" />
         <!-- <router-link class="menu-button" to="/projets">Nos projets</router-link>-->
       </li>
@@ -19,6 +20,7 @@
         <menuButton
             btnClass="menu--button"
             lien="/description"
+            label="Qui sommes-nous ?"
             texte="Qui sommes nous?" />
         <!-- <router-link class="button--white" to="/description">Qui sommes nous ?</router-link>-->
       </li>
@@ -27,7 +29,7 @@
         btnClass="donated--button"
         texte="Faire un don"
         lien="https://frequencies.assoconnect.com/collect/description/340064-c-collecte-de-dons-pour-frequencies"
-        label="Ouvre un nouvel onglet"
+        label="Faire un don"
         />
   </header>
 </template>
