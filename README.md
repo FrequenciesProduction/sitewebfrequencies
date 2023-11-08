@@ -1,69 +1,65 @@
-# frequencies
+## Installation Projet Frequencies
+Tout d'abord, il faut récupérer le projet sur le repo github en clonant depuis cette adresse : 
+[Repo GitHub Frequencies](https://github.com/FrequenciesProduction/sitewebfrequencies)
 
-## Build Setup
+Ensuite, il faut installer les dépendances avec la commande suivante : 
 
-```bash
-# install dependencies
-$ yarn install
+    yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+Une fois les dépendances installées, vous pouvez lancer le serveur avec la commande suivante : 
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+    yarn dev
 
-# generate static project
-$ yarn generate
-```
+Celle-ci va lancer un serveur en local (par defaut, l'adresse est la suivante (elle sera également indiquée dans la console du serveur) : 
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+    http://localhost:3000
 
-## Special Directories
+## Dossiers de structuration du projet
+Ce projet à été migré depuis les version 2  de Nuxt et de Vuejs vers leur versions 3 respectives.
+Il existe donc des dossiers avec chacun son périmètre : 
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+**.firebase**: Configuration et cache de firebase
 
-### `assets`
+**.nuxt**: Dossier créé suite au lancement du serveur local
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+**.output**: Dossier "public" qui sera déployé en ligne
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+**assets**: Ce dossier contient les différents styles des pages du site
 
-### `components`
+**components**: Ce dossier contient tous les composants créés et utilisés dans le site, ainsi que leur style associés
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+**dist**: Ce dossier va etre généré suite à la génération du serveur pour l'environnement de production
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+** layouts**: CE dossier contient le style appliqué par défaut sur tout le site, il contien également la page d'accueil
 
-### `layouts`
+** node_modules**: Contient toutes les dépendances du projet. Il est géré automatiquement par yarn
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+**pages**: Ce dossier contient les pages affichées lorsque l'on navigue sur le site. Chaque nom de fichier dans ce dossier correspond à une route
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+**public**: Contient toutes les images qui sont utilisées sur le site
 
+** server**: Contient la configuration du serveur
+## Fichiers racines
+Les fichiers à la racines de ce projet ne doivent pas être modifiés à la main, il sont modifiés automatiquement lors de l'ajout/suppression de dépendances.
 
-### `pages`
+Seules exceptions : 
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+**firebase.js**: Fonctions utilisées de firebase
+**firebase.json**: Paramétrage de firebase
+** nuxt.config.js**: Paramétrage global de l'application
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+## Déploiement Firebase
+Avant de déployer sur firebase, s'assurer que le site fonctionne avec l'émulateur de firebase: 
 
-### `plugins`
+ 1. Se placer dans le repertoire du projet avec un invite de commandes
+ 2. Executer ``yarn preprod``
+ 3. Executer ``yarn prod``
+ 4. Executer ``firebase emulators:start``
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+Pour déployer sur firebase, il faut suivre les étapes suivantes : 
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+ 1. Se placer dans le repertoire du projet avec un invite de commandes
+ 2. Executer ``yarn preprod``
+ 3. Executer ``yarn prod``
+ 4. Executer ``firebase login --reath (Se connecter avec Developper@frequencies.fr)``
+ 5. Executer ``firebase deploy``

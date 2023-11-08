@@ -1,0 +1,12 @@
+.form-div {
+  margin: .3125rem 0rem .3125rem 0rem;
+}
+
+.custom-file-input:lang(fr-FR) ~ .custom-file-label::after {
+  content: 'Parcourir';
+}
+
+.btn-group-form {
+  display: flex;
+  justify-content: space-evenly;
+}

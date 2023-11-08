@@ -1,0 +1,52 @@
+.img-bottom {
+  margin-bottom: 4vw;
+}
+
+.projects_page {
+  width: 100%;
+}
+
+.projects_page img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.project {
+  border-radius: .5rem;
+  border: 1px solid black;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  padding-right: 1.25rem;
+  height: 14vw;
+  margin-bottom: 5vw;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.project div {
+  padding: 1vw;
+  margin: auto;
+}
+
+.project div p {
+  height: 7vw;
+  overflow: auto;
+}
+
+.project img {
+  width: 20vw;
+  object-fit: contain;
+  margin-right: 1vw;
+}
+
+.project .button--blue {
+  text-align: center;
+  margin: auto 1vw auto auto;
+}
+
+h2 {
+  margin-bottom: 2vw;
+  font-size: 3vw;
+}

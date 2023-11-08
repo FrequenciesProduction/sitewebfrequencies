@@ -1,0 +1,96 @@
+.projects_box {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-left: 2vw;
+}
+
+.project {
+  border-radius: 8px;
+  width: 30%;
+  margin-bottom: 5vw;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  box-sizing: content-box;
+}
+
+.project p {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.project .button--blue {
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 1vw;
+}
+
+.project img {
+  width: 100%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  object-fit: contain;
+}
+
+h3 {
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+}
+
+.project-blue {
+  margin-right: 2vw;
+  background-color: #166bba;
+}
+
+.project-black {
+  margin-right: 2vw;
+  background-color: black;
+}
+
+.project-red {
+  margin-right: 2vw;
+  background-color: #c23636;
+}
+
+.project-blue h3, .project-blue .project-desc {
+  color: #fff;
+}
+
+.project-black h3, .project-black .project-desc {
+  color: #fff;
+}
+
+.project-red h3, .project-red .project-desc {
+  color: #fff;
+}
+
+.project-red .button--blue {
+  background-color: #fff;
+  color: #c23636;
+}
+
+/*button--blue */
+
+@media (max-width: 37.5rem) {
+
+  .project {
+    width: 75%;
+  }
+  .project-desc {
+    font-size: 0.8rem;
+  }
+  .project-desc .button--blue {
+    display: contents;
+  }
+  .projects_box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+}
+

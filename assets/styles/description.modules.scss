@@ -1,0 +1,24 @@
+.onde {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 2vw;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin: 4vw;
+  padding: 0 4vw;
+}
+
+.description img {
+  margin: auto;
+  width: 80%;
+}
+
+.container__description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 5vw;
+}
