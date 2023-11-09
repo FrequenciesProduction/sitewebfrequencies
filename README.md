@@ -61,5 +61,5 @@ Pour déployer sur firebase, il faut suivre les étapes suivantes :
  1. Se placer dans le repertoire du projet avec un invite de commandes
  2. Executer ``yarn preprod``
  3. Executer ``yarn prod``
- 4. Executer ``firebase login --reath (Se connecter avec Developper@frequencies.fr)``
+4. Executer ``firebase login --reauth (Se connecter avec Developper@frequencies.fr)``
  5. Executer ``firebase deploy``
