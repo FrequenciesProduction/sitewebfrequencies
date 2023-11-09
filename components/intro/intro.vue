@@ -14,13 +14,14 @@
             texte="Devenir bénévole" />
       </li>
 
-      <!-- <li>
+      <li>
         <introButton
             btnClass="intro--button"
             label="Aller à la page devenir sponsor"
             lien="/sponsor"
             texte="Devenir sponsor" />
-      </li>-->
+      </li>
+
       <li>
         <introButton
             btnClass="intro--button"
@@ -28,6 +29,7 @@
             lien="/mécène"
             texte="Devenir mécène" />
       </li>
+
     </ul>
   </div>
 </template>
