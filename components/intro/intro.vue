@@ -21,6 +21,7 @@
             lien="/sponsor"
             texte="Devenir sponsor" />
       </li>-->
+      <!--
       <li>
         <introButton
             btnClass="intro--button"
@@ -28,6 +29,7 @@
             lien="/mécène"
             texte="Devenir mécène" />
       </li>
+      -->
     </ul>
   </div>
 </template>
