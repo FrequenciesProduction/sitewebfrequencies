@@ -25,17 +25,12 @@
                             Présentations et extraits des différents projets Frequencies.
                         </p>
                     </div>
-                  <router-link to="/extraits">
+
                     <!-- TO DO -->
-
-
-                    <emission-button>
-
-                    </emission-button>
-                    <button class="emission--button">J'écoute</button>
+                  <router-link to="/extraits">
+                    <emission-button class="emission--button" texte="J'écoute">J'écoute</emission-button>
                     <span aria-label="Vidéos Youtube de Frequencies"></span>
                   </router-link>
-
                 </div>
                 <div class="project">
                     <img src="/img/logo_facebook.jpg">
@@ -46,8 +41,9 @@
                         </p>
                     </div>
                   <router-link to="/videos">
-                    <button class="emission--button">Je regarde</button>
-                    <span aria-label="Vidéos Youtube de Frequencies"></span></router-link>
+                    <emission-button class="emission--button" texte="Je regarde">Je regarde</emission-button>
+                    <span aria-label="Vidéos Youtube de Frequencies"></span>
+                  </router-link>
                 </div>
 
             </div>
