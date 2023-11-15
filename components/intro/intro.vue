@@ -1,7 +1,7 @@
 <template>
-  <div class="intro">
-    <h1 class="h1-title">Frequencies Production</h1>
-    <p>
+  <div class="container">
+    <h1 class="intro--title">Frequencies Production</h1>
+    <p class="text--resume">
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
       de tous
     </p>
@@ -14,14 +14,14 @@
             texte="Devenir bénévole" />
       </li>
 
-      <!-- <li>
+      <li>
         <introButton
             btnClass="intro--button"
             label="Aller à la page devenir sponsor"
             lien="/sponsor"
             texte="Devenir sponsor" />
-      </li>-->
-      <!--
+      </li>
+
       <li>
         <introButton
             btnClass="intro--button"
@@ -29,7 +29,7 @@
             lien="/mécène"
             texte="Devenir mécène" />
       </li>
-      -->
+
     </ul>
   </div>
 </template>
