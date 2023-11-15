@@ -10,10 +10,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(#141414 90%, hsla(0, 0%, 8%, 0));
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #171a1d;
+  //background-image: linear-gradient(#141414 90%, hsla(0, 0%, 8%, 0));
+  //box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index: 3;
+  //z-index: 3;
 }
 
 .sticky {
@@ -44,16 +45,21 @@ body {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  //padding: 5px;
   text-decoration: none;
-  border-radius: 8px;
-  border: 2px solid #c23636;
-  margin: 1vw;
+  //border-radius: 8px;
+  //border: 2px solid #c23636;
+  margin: 1.5vw;
+  //width: 80px;
+  //height: 80px;
 }
 
 .img-logo {
-  width: 64px;
-  height: 64px;
+  display: flex;
+  justify-content: center;
+  //padding: 5px;
+  width: 70px;
+  height: 70px;
 }
 
 /* menu */

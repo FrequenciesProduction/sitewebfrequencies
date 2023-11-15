@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="intro--title">Frequencies Production</h1>
-    <p class="text--resume">
+    <p>
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
       de tous
     </p>
