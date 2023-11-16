@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="emission-box">
     <div v-for="emission in emissionsData" class="project">
       <img :src="emission.itemObject.image">
       <div>

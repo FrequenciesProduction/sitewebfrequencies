@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="intro">
     <h1 class="intro--title">Frequencies Production</h1>
     <p>
       Création de fictions sonores inspirées pour des personnes malvoyantes à destination
@@ -21,7 +21,7 @@
             lien="/sponsor"
             texte="Devenir sponsor" />
       </li>
-
+      <!--
       <li>
         <introButton
             btnClass="intro--button"
@@ -29,7 +29,7 @@
             lien="/mécène"
             texte="Devenir mécène" />
       </li>
-
+      -->
     </ul>
   </div>
 </template>
