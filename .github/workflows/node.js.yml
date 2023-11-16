@@ -16,7 +16,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
+        # Build only for Node 18 to minimize CI run time
+        # node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    - run: npm run build --if-present
+    - run: yarn install
+    - run: yarn run build
     # Uncomment if tests are added
-    # - run: npm test
+    # - run: yarn test
