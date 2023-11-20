@@ -10,10 +10,11 @@
         <introButton
             btnClass="intro--button"
             label="Aller à la page devenir bénévole"
-            lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"
+            lien="/benevole"
             texte="Devenir bénévole" />
       </li>
-
+      <!--lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"-->
+      <!--
       <li>
         <introButton
             btnClass="intro--button"
@@ -21,6 +22,7 @@
             lien="/sponsor"
             texte="Devenir sponsor" />
       </li>
+      -->
       <!--
       <li>
         <introButton
