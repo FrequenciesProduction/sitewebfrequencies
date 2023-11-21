@@ -1,7 +1,7 @@
 <template>
   <main class="main main_box" role="main">
-    <div class="container-head">
-      <img alt="image accueil" src="../public/img/qui_sommes_nous_1.png">
+    <div class="head">
+      <img alt="image accueil" src="/img/qui_sommes_nous_1.png">
       <h1>Devenir bénévole</h1>
     </div>
 
@@ -34,7 +34,21 @@
       </div>
 
       <div class="container-form">
+        <h2>Inscription</h2>
+        <form @submit.prevent="signup">
+          <input v-model="name" placeholder="Votre nom" type="text">
+          <input v-model="firstname" placeholder="Votre prénom" type="text">
+          <input v-model="email" placeholder="Votre email" type="email">
+          <input v-model="password" placeholder="Mot de passe" type="password">
+          <input v-model="passwordConfirm" placeholder="Confirmation" type="password">
 
+          <div v-if="authStatus === 'loading'" class="loader"></div>
+
+          <div v-else class="btn--group">
+            <button class="btn--green" type="submit">Inscription</button>
+            <button class="btn--green--alt" @click="login('Login')">Connexion</button>
+          </div>
+        </form>
       </div>
 
     </div>
