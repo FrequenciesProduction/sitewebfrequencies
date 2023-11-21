@@ -1,13 +1,13 @@
 <template>
   <main class="main main_box" role="main">
-    <div class="head">
+    <div class="container">
       <img alt="image accueil" src="/img/qui_sommes_nous_1.png">
-      <h1>Devenir bénévole</h1>
+      <h2>Devenir bénévole</h2>
     </div>
 
-    <div class="container">
+    <div class="content-container">
       <div class="container-intro">
-        <h2>Pourquoi bénévole chez frequencies?</h2>
+        <h3>Pourquoi bénévole chez frequencies?</h3>
         <p>
           - Présenter brièvement l'importance du bénévolat dans l'association.
           - Mettre en avant les avantages du bénévolat, tels que l'impact positif sur la communauté et l'opportunité de
@@ -16,7 +16,7 @@
       </div>
 
       <div class="container-process">
-        <h2>Comment devenir bénévole chez frequencies?</h2>
+        <h3>Comment devenir bénévole chez frequencies?</h3>
         <p>
           - Expliquer étape par étape comment les visiteurs peuvent devenir bénévoles,
           y compris la soumission d'une candidature et les critères de sélection.
@@ -25,7 +25,7 @@
       </div>
 
       <div class="container-testimonial">
-        <h2>Qu'en pensent nos bénévoles?</h2>
+        <h3>Qu'en pensent nos bénévoles?</h3>
         <p>
           - Partager des témoignages de bénévoles actuels pour donner un aperçu de leur expérience et de l'impact de
           leur travail.
@@ -34,7 +34,7 @@
       </div>
 
       <div class="container-form">
-        <h2>Inscription</h2>
+        <h3>Inscription</h3>
         <form @submit.prevent="signup">
           <input v-model="name" placeholder="Votre nom" type="text">
           <input v-model="firstname" placeholder="Votre prénom" type="text">
@@ -56,6 +56,8 @@
 </template>
 
 <script setup>
+import '/assets/styles/benevole.modules.scss'
+
 useHead({
   title: 'Devenir un bénévole'
 })
