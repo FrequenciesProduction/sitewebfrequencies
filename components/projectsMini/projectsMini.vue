@@ -1,9 +1,8 @@
 <template>
   <div class="container">
-    <div v-for="item in filteredItems" :key="item.title" class="project">
-      <div>
-        <h2 class="black_outline">{{ item.title }}</h2>
-      </div>
+    <div v-for="item in filteredItems" :key="item.title" >
+      <!-- class="project" -->
+      <h2 class="black_outline">{{ item.title }}</h2>
     </div>
   </div>
 </template>
