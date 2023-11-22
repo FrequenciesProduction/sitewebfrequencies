@@ -10,14 +10,15 @@
         <p v-if="emission.itemObject.composition" v-html="emission.itemObject.composition"></p>
         <p v-if="emission.itemObject.mixage" v-html="emission.itemObject.mixage"></p>
         <p v-if="emission.itemObject.podcast" v-html="emission.itemObject.podcast"></p>
-      </div>
-      <div style="max-width: 765px;">
-        <div style="left: 0; width: 100%; height: 102px; position: relative;">
+        <div style="max-width: 765px; z-index: 1;">
+        <div style="left: 0; width: 200%; height: 170px; position: relative;">
           <iframe :src="emission.itemObject.link"
                   allowfullscreen scrolling="no"
                   style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"></iframe>
         </div>
       </div>
+      </div>
+      
     </div>
   </div>
 </template>
