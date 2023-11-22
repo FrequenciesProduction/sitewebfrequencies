@@ -14,12 +14,15 @@
 .cards_content1,
 .cards_content2 {
   margin: 20px;
-  padding: 5px;
+  //padding: 5px;
 }
 
 .card__content-intro,
 .card__content-process,
 .card__content-testimonial,
 .card__content-form {
+  margin: auto;
   background-color: #5c636a;
+  width: 90%;
+  height: 60%;
 }
