@@ -48,8 +48,12 @@ Seules exceptions :
 **firebase.json**: Paramétrage de firebase
 ** nuxt.config.js**: Paramétrage global de l'application
 
+## Tests
+Les tests unitaires sont implémentés avec Vitest. On peut les exécuter en lançant la commande `yarn test:unit`.
+
 ## Déploiement Firebase
-Avant de déployer sur firebase, s'assurer que le site fonctionne avec l'émulateur de firebase: 
+Avant de déployer sur firebase, s'assurer que le site fonctionne avec l'émulateur de firebase.  
+Pour installer l'utilitaire CLI de Firebase, exécuter `sudo npm install -g firebase-tools`.
 
  1. Se placer dans le repertoire du projet avec un invite de commandes
  2. Executer ``yarn preprod``
