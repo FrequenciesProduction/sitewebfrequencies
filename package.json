@@ -11,9 +11,7 @@
     "prepare": "nuxt prepare",
     "preprod": "nuxt generate && nuxt build",
     "prod": "npx nuxi generate",
-    "test:unit": "vitest --run",
-    "test:component": "",
-    "test:e2e": ""
+    "test:unit": "vitest --run"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
