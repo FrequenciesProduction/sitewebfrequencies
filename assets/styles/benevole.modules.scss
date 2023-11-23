@@ -9,20 +9,38 @@
   flex-direction: row;
 }
 
-.cards_content1,
-.cards_content2 {
+.cards__content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 20px;
   width: 100%;
+  margin-bottom: 5vw;
 }
 
-.card__content-intro,
-.card__content-process,
-.card__content-testimonial,
-.card__content-form {
-  background-color: #5c636a;
-  min-height: 30%;
-  margin: 10px;
+.card__content-mini {
+  display: flex;
+  flex-direction: column;
+  min-height: 45%;
+  margin: 2vw;
+  padding: 2vw;
+  font-size: medium;
+  text-align: left;
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
 }
+
+.h3 {
+  font-size: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.input {
+  margin: 0;
+}
+
+

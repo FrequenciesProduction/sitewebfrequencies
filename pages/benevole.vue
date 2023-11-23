@@ -6,8 +6,8 @@
     </div>
 
     <div class="container">
-      <div class="cards_content1">
-        <div class="card__content-intro">
+      <div class="cards__content">
+        <div class="card__content-mini">
           <h3>Pourquoi devenir bénévole chez frequencies?</h3>
           <p>
             - Présenter brièvement l'importance du bénévolat dans l'association.
@@ -17,7 +17,7 @@
           </p>
         </div>
 
-        <div class="card__content-process">
+        <div class="card__content-mini">
           <h3>Comment devenir bénévole chez frequencies?</h3>
           <p>
             - Expliquer étape par étape comment les visiteurs peuvent devenir bénévoles,
@@ -27,8 +27,8 @@
         </div>
       </div>
 
-      <div class="cards_content2">
-        <div class="card__content-testimonial">
+      <div class="cards__content">
+        <div class="card__content-mini">
           <h3>Qu'en pensent nos bénévoles?</h3>
           <p>
             - Partager des témoignages de bénévoles actuels pour donner un aperçu de leur expérience et de l'impact de
@@ -37,21 +37,27 @@
           </p>
         </div>
 
-        <div class="card__content-form">
+        <div class="card__content-mini">
           <h3>Inscription</h3>
-          <form @submit.prevent="signup">
-            <input v-model="name" placeholder="Votre nom" type="text">
-            <input v-model="firstname" placeholder="Votre prénom" type="text">
-            <input v-model="email" placeholder="Votre email" type="email">
-            <input v-model="password" placeholder="Mot de passe" type="password">
-            <input v-model="passwordConfirm" placeholder="Confirmation" type="password">
-
-            <div v-if="authStatus === 'loading'" class="loader"></div>
-
-            <div v-else class="btn--group">
-              <button class="btn--green" type="submit">Inscription</button>
-              <button class="btn--green--alt" @click="login('Login')">Connexion</button>
+          <form @submit.prevent="login">
+            <div>
+              <label for="firstName">first name</label>
+              <input v-model="firstName" name="firstName" placeholder="first name">
             </div>
+            <div>
+              <label for="lastName">last name</label>
+              <input v-model="lastName" name="lastName" placeholder="last name">
+            </div>
+            <div>
+              <div>
+                <label for="email">email</label>
+                <input v-model="email" name="email" placeholder="email">
+              </div>
+              <label for="password">password</label>
+              <input v-model="password" name="password" placeholder="password" type="password">
+            </div>
+            <button type="submit" value="register">S'inscrire</button>
+            <button type="submit" value="login">Se connecter</button>
           </form>
         </div>
       </div>
@@ -65,4 +71,26 @@ import '/assets/styles/benevole.modules.scss'
 useHead({
   title: 'Devenir un bénévole'
 })
+</script>
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: ''
+    }
+  },
+
+  methods: {
+    submit() {
+      console.log(this.name)
+    }
+  }
+}
+
 </script>
