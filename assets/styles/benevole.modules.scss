@@ -1,28 +1,28 @@
-.main_container {
+.container__head {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.content-container {
+.container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
 }
 
 .cards_content1,
 .cards_content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin: 20px;
-  //padding: 5px;
+  width: 100%;
 }
 
 .card__content-intro,
 .card__content-process,
 .card__content-testimonial,
 .card__content-form {
-  margin: auto;
   background-color: #5c636a;
-  width: 90%;
-  height: 60%;
+  min-height: 30%;
+  margin: 10px;
 }
