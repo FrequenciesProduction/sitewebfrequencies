@@ -1,11 +1,11 @@
 <template>
-  <main class="main_box" role="main">
-    <div class="main_container">
+  <main class="main main_box" role="main">
+    <div class="container__head">
       <img alt="image accueil" src="/img/qui_sommes_nous_1.png">
       <h2>Devenir bénévole</h2>
     </div>
 
-    <div class="content-container">
+    <div class="container">
       <div class="cards_content1">
         <div class="card__content-intro">
           <h3>Pourquoi devenir bénévole chez frequencies?</h3>
