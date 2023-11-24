@@ -2,7 +2,7 @@
   <main class="main main_box" role="main">
     <div class="container__head">
       <img alt="image accueil" src="/img/qui_sommes_nous_1.png">
-      <h2>Devenir bénévole</h2>
+      <h2>Inscription</h2>
     </div>
 
     <div class="container">
@@ -40,24 +40,16 @@
         <div class="card__content-mini">
           <h3>Inscription</h3>
           <form @submit.prevent="login">
-            <div>
-              <label for="firstName">first name</label>
-              <input v-model="firstName" name="firstName" placeholder="first name">
+            <input v-model="firstname" placeholder="Votre prénom" type="firstname">
+            <input v-model="lastname" placeholder="Votre nom" type="lastname">
+
+            <input v-model="email" placeholder="Votre email" type="email">
+            <input v-model="password" placeholder="Mot de passe" type="password">
+
+            <div class="btn--group">
+              <button class="btn--green" type="submit">Connexion</button>
+              <button class="btn--green--alt" @click="signup('Signup')">Inscription</button>
             </div>
-            <div>
-              <label for="lastName">last name</label>
-              <input v-model="lastName" name="lastName" placeholder="last name">
-            </div>
-            <div>
-              <div>
-                <label for="email">email</label>
-                <input v-model="email" name="email" placeholder="email">
-              </div>
-              <label for="password">password</label>
-              <input v-model="password" name="password" placeholder="password" type="password">
-            </div>
-            <button type="submit" value="register">S'inscrire</button>
-            <button type="submit" value="login">Se connecter</button>
           </form>
         </div>
       </div>
@@ -65,32 +57,48 @@
   </main>
 </template>
 
-<script setup>
-import '/assets/styles/benevole.modules.scss'
-
-useHead({
-  title: 'Devenir un bénévole'
-})
-</script>
+<style scoped>
+@import "/assets/styles/benevole.modules.scss";
+</style>
 
 <script>
-import axios from "axios";
 
 export default {
-  data() {
+  setup() {
+    useHead({
+      title: 'Inscription'
+    })
+    const route = useRoute()
+    const name = route.query.user
+
     return {
-      firstName: '',
-      lastName: '',
+      firstname: '',
+      lastname: '',
       email: '',
       password: ''
     }
   },
-
   methods: {
-    submit() {
-      console.log(this.name)
+    async login() {
+      const {firstname, lastname, email, password} = this;
+      const res = await $fetch(
+          "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/utilisateurs",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              firstname,
+              lastname,
+              email,
+              password
+            })
+          }
+      );
+      const data = await res.json();
+      console.log(data);
     }
   }
-}
-
+};
 </script>

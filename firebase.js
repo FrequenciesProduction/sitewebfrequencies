@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import {initializeApp} from "firebase/app";
+import {getStorage} from 'firebase/storage';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,9 +19,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-import { getStorage, ref, deleteObject } from 'firebase/storage';
 const storage = getStorage(app);
 const emissionsBaseUrl = "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/emissions.json";
 const deleteEmissionUrl = "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/emissions/";
+const userUrl = "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/utilisateurs";
 
-export { storage, emissionsBaseUrl, deleteEmissionUrl }
+export {storage, emissionsBaseUrl, deleteEmissionUrl, userUrl}
