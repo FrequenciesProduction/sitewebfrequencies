@@ -43,4 +43,11 @@
   margin: 0;
 }
 
+@media (max-width: 37.5rem) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
