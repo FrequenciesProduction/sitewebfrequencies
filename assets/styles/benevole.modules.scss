@@ -20,6 +20,7 @@
 .card__content-mini {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 45%;
   margin: 2vw;
   padding: 2vw;
@@ -33,14 +34,21 @@
   font-size: 20px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.input {
+  height: 40px;
 }
 
-.input {
-  margin: 0;
+.btn--group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20pxrn dev;
+}
+
+.btn--green,
+.btn--green--alt {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 @media (max-width: 37.5rem) {

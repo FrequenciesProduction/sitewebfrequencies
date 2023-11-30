@@ -6,13 +6,13 @@
       de tous
     </p>
     <ul class="button-box">
-      <li>
+      <!-- <li>
         <introButton
             btnClass="intro--button"
             label="Aller à la page devenir bénévole"
             lien="/benevole"
             texte="Devenir bénévole" />
-      </li>
+      </li>-->
       <!--lien="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform"-->
       <!--
       <li>
@@ -40,6 +40,4 @@
   @import './intro.modules.scss';
 </style>
 
-<script setup>
-import introButton from '~/components/buttons/introButton.vue'
-</script>
+<script setup></script>
