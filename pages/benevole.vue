@@ -39,7 +39,7 @@
 
         <div class="card__content-mini">
           <h3>Inscription</h3>
-          <!-- <form @submit.prevent="login">-->
+
             <input v-model="firstname" placeholder="Votre prénom" type="firstname">
             <input v-model="lastname" placeholder="Votre nom" type="lastname">
 
@@ -50,7 +50,7 @@
               <button class="btn--green" type="submit">Connexion</button>
               <button class="btn--green--alt" @click="signup('Signup')">Inscription</button>
             </div>
-          <!-- </form>-->
+
         </div>
       </div>
     </div>
