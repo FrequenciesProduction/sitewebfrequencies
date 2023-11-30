@@ -47,8 +47,8 @@
             <input v-model="password" placeholder="Mot de passe" type="password">
 
             <div class="btn--group">
-              <button class="btn--green" type="submit">Connexion</button>
-              <button class="btn--green--alt" @click="signup('Signup')">Inscription</button>
+              <button class="btn--green" @click="login">Connexion</button>
+              <button class="btn--green--alt" @click="signup">Inscription</button>
             </div>
 
         </div>
@@ -80,11 +80,11 @@ export default {
   },
   methods: {
     async login() {
-      const {firstname, lastname, email, password} = this;
+      const {email, password} = this;
       const res = await $fetch(
           "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/utilisateurs",
           {
-            method: "POST",
+            method: "GET",
             headers: {
               "Content-Type": "application/json"
             },
@@ -98,6 +98,17 @@ export default {
       );
       const data = await res.json();
       console.log(data);
+    },
+
+    async signup() {
+      const {firstname, lastname, email, password} = this;
+      const res = await $fetch(
+          "https://frequencies-web-default-rtdb.europe-west1.firebasedatabase.app/utilisateurs",
+          {
+            method: "GET",
+            headers: {}
+          }
+      )
     }
   }
 };
