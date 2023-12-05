@@ -1,8 +1,15 @@
 <template>
   <div class="container">
-    <div v-for="item in filteredItems" :key="item.title" >
-      <!-- class="project" -->
-      <h2 class="black_outline">{{ item.title }}</h2>
+    <div v-for="item in filteredItems" :key="item.title" class="project_mini">
+      <div>
+        <h3 class="title">{{ item.title }}</h3>
+      </div>
+      <div >
+        <h4 class="date">{{ item.formattedDate }}</h4>
+      </div>
+      <div style="text-align: right !important;">
+        <button class="button_red">Je regarde</button>
+      </div>
     </div>
   </div>
 </template>
@@ -53,9 +60,13 @@ export default {
       });
 
       filteredItems.forEach(item => {
-        console.log(item.title, item.isoDate);
+        const date = new Date(item.isoDate);
+        const options = { year: 'numeric', month: 'numeric', day: 'numeric'};
+        item.formattedDate = date.toLocaleDateString('fr-FR', options);
       });
+      
       this.filteredItems = filteredItems.slice(0, 5);
+      console.log(this.filteredItems)
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error)
     }
