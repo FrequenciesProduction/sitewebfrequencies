@@ -16,6 +16,41 @@
   box-sizing: content-box;
 }
 
+.project_mini {
+  border-radius: .5rem;
+  border: .0625rem solid black;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  border-radius: .5rem;
+  border: .0625rem solid black;
+  margin: 0;
+  margin-bottom: 1vw;
+  padding: 0px;
+  overflow: hidden;
+  align-items: center;
+}
+.title {
+  grid-column: 1;
+  text-align: left;
+}
+
+.date {
+  grid-column: 2;
+  text-align: center;
+}
+
+.button_red {
+  border-radius: 4px;
+  border: 1px solid #c23636;
+  color: #fff;
+  background-color: #c23636;
+  text-decoration: none;
+  padding: 1vw 1vw;
+  max-height: 70px;
+  grid-column: 3;
+}
+
+
 .project p {
   padding-left: 1vw;
   padding-right: 1vw;
