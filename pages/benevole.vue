@@ -39,8 +39,14 @@
 
         < class="card__content-mini">
           <h3>Inscription</h3>
+<
         <donatedButton
             link="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" />
+
+
+        <donatedButton
+            link="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" />
+
       </div>
     </div>
   </main>
