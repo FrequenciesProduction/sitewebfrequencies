@@ -37,33 +37,31 @@
           </p>
         </div>
 
-        <div class="card__content-mini">
+        < class="card__content-mini">
           <h3>Inscription</h3>
+<
+        <donatedButton
+            link="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" />
 
-            <input v-model="firstname" placeholder="Votre prénom" type="firstname">
-            <input v-model="lastname" placeholder="Votre nom" type="lastname">
 
-            <input v-model="email" placeholder="Votre email" type="email">
-            <input v-model="password" placeholder="Mot de passe" type="password">
+        <donatedButton
+            link="https://docs.google.com/forms/d/e/1FAIpQLSc9T5X5v1Ydinnh5OY0PR2RWsXEp_Ac5zkPIKZrpblGRT2S4g/viewform" />
 
-            <div class="btn--group">
-              <button class="btn--green" @click="login">Connexion</button>
-              <button class="btn--green--alt" @click="signup">Inscription</button>
-            </div>
-
-        </div>
       </div>
     </div>
   </main>
 </template>
 
-<style scoped>
-@import "/assets/styles/benevole.modules.scss";
+<style>
+@import './assets/styles/benevole.scss';
 </style>
 
 <script>
 
+import DonatedButton from "~/components/buttons/donatedButton.vue";
+
 export default {
+  components: {DonatedButton},
   setup() {
     useHead({
       title: 'Inscription'
