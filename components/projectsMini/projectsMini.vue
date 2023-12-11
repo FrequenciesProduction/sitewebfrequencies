@@ -66,7 +66,6 @@ export default {
       });
       
       this.filteredItems = filteredItems.slice(0, 5);
-      console.log(this.filteredItems)
     } catch (error) {
       console.error('Erreur lors de la récupération des données:', error)
     }
